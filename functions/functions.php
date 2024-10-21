@@ -1,7 +1,7 @@
 
 <?php
 
-$db=mysqli_connect("localhost","root","","pensil_ajaib");
+$db=mysqli_connect("localhost","root","","db_pensilajaib_v1");
 //for getting user ip start
 function getUserIp(){
 	switch (true) {

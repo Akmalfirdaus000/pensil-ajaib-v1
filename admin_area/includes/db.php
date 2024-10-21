@@ -1,6 +1,6 @@
 <?php
 
-$con=mysqli_connect("localhost","root","","pensil_ajaib");
+$con=mysqli_connect("localhost","root","","db_pensilajaib_v1");
 
   ?>
 
