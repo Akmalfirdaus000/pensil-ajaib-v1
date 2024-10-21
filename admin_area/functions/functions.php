@@ -1,7 +1,6 @@
-
 <?php
 
-$db=mysqli_connect("localhost","root","","e_com");
+$db=mysqli_connect("localhost","root","","db_pensilajaib_v1");
 function getPro(){
 	global $db;
 	$get_product="select * from products order by 1 DESC LIMIT 0,6";
@@ -37,4 +36,3 @@ function getPro(){
 
 
   ?>
- 
