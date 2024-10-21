@@ -24,7 +24,7 @@ html{
 /*navbar start*/
 
 .navbar-fixed-top{
-    background:#1d4354;
+    background:blue;
     padding: 1rem;
     margin-top: 1rem;
     box-shadow: 0px 8px 16px 4px rgba(0,0,0,0.2); 
@@ -96,10 +96,10 @@ position: absolute;
 top: 51px;
 margin-top: 32px;
 width: auto;
-height: 110%;
+height: 130%;
 border-radius: 0;
 display: block;
-background-color: #1d4354;
+background-color: red;
 bottom: 0;
 overflow: hidden;
 padding-bottom: 40px;
@@ -262,7 +262,6 @@ padding:5px;
   background: #000;
   color: #ffffff;
   padding: 1rem;
-  font-size: 22px;
 
 }
 .thumb-info-title .thumb-info-type{

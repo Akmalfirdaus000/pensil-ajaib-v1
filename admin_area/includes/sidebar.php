@@ -17,7 +17,7 @@ if (!isset($_SESSION['admin_email'])){
 			<span class="icon-bar"></span>
 
 		</button>
-		<a href="index.php?dashboard" class="navbar-brand"><span>Admin Panel</span></a>
+		<a href="index.php?dashboard" class="navbar-brand"><span>Admin Pensil Ajaib</span></a>
 	</div>
 	
 		<div class="dropdown">
@@ -48,56 +48,57 @@ if (!isset($_SESSION['admin_email'])){
     <a href="index.php?dashboard"><i class="fa fa-bar-chart"></i> Dashboard</a>
   </li>
   <li class="button-dropdown" id="#products">
-    <a href="#" class="dropdown-toggle" data-toggle="collapse" data-target="#products"><i class="fa fa-fw fa-table"></i> Product <i class="fa fa-fw fa-caret-down"></i></a>
+    <a href="#" class="dropdown-toggle" data-toggle="collapse" data-target="#products"><i class="fa fa-fw fa-table"></i> Orderan <i class="fa fa-fw fa-caret-down"></i></a>
 
     <ul class="dropdown-menu" id="products">
       <li>
-        <a href="index.php?insert_product">Insert Product</a>
+        <a href="index.php?insert_product">Tambahkan Orderan </a>
       </li>
       <li>
-        <a href="index.php?view_product">view Product</a>
+        <a href="index.php?view_product">Lihat Orderan</a>
       </li>
      </ul>
   </li>
   <li class="button-dropdown" id="#products_cat">
-    <a href="#" class="dropdown-toggle" data-toggle="collapse" data-target="#products_cat"><i class="fa fa-fw fa-table"></i> Product Categories <i class="fa fa-fw fa-caret-down"></i></a>
+    <a href="#" class="dropdown-toggle" data-toggle="collapse" data-target="#products_cat"><i class="fa fa-fw fa-table"></i> Kategori Orderan <i class="fa fa-fw fa-caret-down"></i></a>
 
     <ul id="#products_cat" class="dropdown-menu">
       <li>
-        <a href="index.php?insert_product_cat">Insert Product Categories</a>
+        <a href="index.php?insert_product_cat">Tambahkan Kategori</a>
       </li>
       <li>
-        <a href="index.php?view_product_cat">view Product Categories</a>
+        <a href="index.php?view_product_cat">Lihat Kategori</a>
       </li>
      </ul>
   </li>
   <li class="button-dropdown" id="#category">
-    <a href="#" class="dropdown-toggle" data-toggle="collapse" data-target="#category"><i class="fa fa-fw fa-table"></i> Categories <i class="fa fa-fw fa-caret-down"></i></a>
+    <a href="#" class="dropdown-toggle" data-toggle="collapse" data-target="#category"><i class="fa fa-fw fa-table"></i> Kategori<i class="fa fa-fw fa-caret-down"></i></a>
 
     <ul id="#category" class="dropdown-menu">
       <li>
-        <a href="index.php?insert_categories">Insert Category</a>
+        <a href="index.php?insert_categories">Tambahkan Kategori</a>
       </li>
       <li>
-        <a href="index.php?view_categories">view Category</a>
+        <a href="index.php?view_categories">Lihat Kategori</a>
       </li>
      </ul>
   </li>
 
-<li class="button-dropdown" >
-  <a href="#" class="dropdown-toggle" data-toggle="collapse" data-target="#boxes">
-    <i class="fa fa-fw fa-table"></i> Boxes Section <i class="fa fa-fw fa-caret-down"></i>
-  </a>
-  <ul id="#boxes" class="dropdown-menu">
-    <li>
-      <a href="index.php?insert_box">Insert Box</a>
-    </li>
-     <li>
-      <a href="index.php?view_box">View Box</a>
-    </li>
+ <li class="button-dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="collapse" data-target="#users"><i class="fa fa-fw fa-table"></i>  Users <i class="fa fa-fw fa-caret-down"></i></a>
 
-  </ul>
-</li>
+    <ul id="#users" class="dropdown-menu">
+      <li>
+        <a href="index.php?insert_user">Insert User</a>
+      </li>
+      <li>
+        <a href="index.php?view_user">view User</a>
+      </li>
+      <li>
+        <a href="index.php?user_profile=<?php echo $admin_id ?>">Edit Profile</a>
+      </li>
+     </ul>
+  </li>
 
   <li class="button-dropdown">
     <a href="#" class="dropdown-toggle" data-toggle="collapse" data-target="#slider"><i class="fa fa-fw fa-table"></i>  Slider <i class="fa fa-fw fa-caret-down"></i></a>
@@ -113,34 +114,20 @@ if (!isset($_SESSION['admin_email'])){
   </li>
   <li>
   	<a href="index.php?view_customer">
-  		<i class="fa fa-fw fa-edit"></i> View Customer
+  		<i class="fa fa-fw fa-edit"></i> Lihat Karyawan
   	</a>
   </li>
   <li>
   	<a href="index.php?view_order">
-  		<i class="fa fa-fw fa-list"></i> View Order
+  		<i class="fa fa-fw fa-list"></i> Lihat Orderan
   	</a>
   </li>
   <li>
   	<a href="index.php?view_payments">
-  		<i class="fa fa-fw fa-money"></i> View Payments
+  		<i class="fa fa-fw fa-money"></i> Lihat Lintas Penyelesaian
   	</a>
   </li>
-  <li class="button-dropdown">
-    <a href="#" class="dropdown-toggle" data-toggle="collapse" data-target="#users"><i class="fa fa-fw fa-table"></i>  Users <i class="fa fa-fw fa-caret-down"></i></a>
-
-    <ul id="#users" class="dropdown-menu">
-      <li>
-        <a href="index.php?insert_user">Insert User</a>
-      </li>
-      <li>
-        <a href="index.php?view_user">view User</a>
-      </li>
-      <li>
-        <a href="index.php?user_profile=<?php echo $admin_id ?>">Edit Profile</a>
-      </li>
-     </ul>
-  </li>
+ 
   
 </ul>
 
