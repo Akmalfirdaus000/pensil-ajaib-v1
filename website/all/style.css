@@ -28,7 +28,7 @@ html{
 .heading{
     padding-top: 7rem;
     width: 84%;
-    border-bottom: .4rem solid #1d4354;
+    border-bottom: .4rem solid #0ca6ed;
     margin:0 auto;
 }
 
@@ -36,7 +36,7 @@ html{
     font-size: 2rem;
     padding:1rem 26rem;
     color:#fff;
-    background: #1d4354;
+    background: #0ca6ed;
     border-top-right-radius: 1rem;
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 45rem;
@@ -116,7 +116,7 @@ header .header-1 .form-container form label:hover{
                                                                  /*second project start*/
 .btn {
  
-  background-color: #1d4354;
+  background-color: #0ca6ed;
   color: #fff;
   padding: .4rem .8rem;
   font-size:1.6rem;
@@ -155,7 +155,7 @@ color: green;
   text-transform: uppercase;
   font-size: 36px;
   color: #fff;
-  background-color:    #1d4354;
+  background-color:    #0ca6ed;
   font-weight: 100;
   text-align: center; 
   margin-top: 10rem;
@@ -210,7 +210,7 @@ color: green;
         color: black;
         margin: .5rem;
         margin-left: 5.5rem;
-        background-color:#1d4354;
+        background-color:#0ca6ed;
              }
 /* new this week section End */
 
@@ -218,24 +218,24 @@ color: green;
                                            /*second project end*/
 /* Green 
 .sucess {
-  border-color: #1d4354;
+  border-color: #0ca6ed;
   color: green;
   margin-right: ;
   margin-left: 42rem;
 }
 
 .sucess:hover {
-  background-color: #1d4354;
+  background-color: #0ca6ed;
   color: white;
 }
 
 /* Blue 
 .inf {
-  border-color: #1d4354;
+  border-color: #0ca6ed;
   color: dodgerblue;
 }
 .inf:hover {
-  background: #1d4354;
+  background: #0ca6ed;
   color: white;
 }
 .topnav a.icon {
@@ -253,7 +253,7 @@ color: green;
    margin: 0;
    padding: 0;
    overflow: hidden;
-     background: #1d4354;
+     background: #0ca6ed;
     /* background:
       repeating-linear-gradient(190deg, rgba(255, 0, 0, 0.5) 40px,
         rgba(255, 153, 0, 0.5) 80px, rgba(255, 255, 0, 0.5) 120px,
@@ -330,7 +330,7 @@ color: green;
 
 .icons a:hover{
     
-     background-color: #1d4354;
+     background-color: #0ca6ed;
      color: #6fda44;
 }
 */
@@ -492,7 +492,7 @@ z-index: 0rem;display: flex;
     border-radius:3rem;
 }
 .box-container .box:hover{
-    background-color: #1d4354;}
+    background-color: #0ca6ed;}
 
   .arrival h1{
    color: red;
@@ -504,7 +504,7 @@ z-index: 0rem;display: flex;
     font-size: 2rem;
     text-align: center;
     color:white;
-    background-color: #1d4354;
+    background-color: #0ca6ed;
        box-shadow: rgba(6, 24, 44, 0.4) 0rem 0rem 0rem .2rem, 
  rgba(6, 24, 44, 0.65) 0rem .4rem .6rem -0.1rem, 
  rgba(255, 255, 255, 0.08) 0rem .1rem 0rem;
@@ -556,7 +556,7 @@ z-index: 0rem;display: flex;
      border-radius:3rem;
 }
 .box-container .box:hover{
-    background-color: #1d4354;}
+    background-color: #0ca6ed;}
 
   .parlor h1{
    color: red;
@@ -568,7 +568,7 @@ z-index: 0rem;display: flex;
     font-size: 2rem;
     text-align: center;
     color:white;
-    background-color: #1d4354;
+    background-color: #0ca6ed;
        box-shadow: rgba(6, 24, 44, 0.4) 0rem 0rem 0rem .2rem, 
  rgba(6, 24, 44, 0.65) 0rem .4rem .6rem -0.1rem, 
  rgba(255, 255, 255, 0.08) 0rem .1rem 0rem;
@@ -620,7 +620,7 @@ z-index: 0rem;display: flex;
      border-radius:3rem;
 }
 .box-container .box:hover{
-    background-color: #1d4354;}
+    background-color: #0ca6ed;}
 
   .arrival h1{
    color: red;
@@ -632,7 +632,7 @@ z-index: 0rem;display: flex;
     font-size: 2rem;
     text-align: center;
     color:white;
-    background-color: #1d4354;
+    background-color: #0ca6ed;
        box-shadow: rgba(6, 24, 44, 0.4) 0rem 0rem 0rem .2rem, 
  rgba(6, 24, 44, 0.65) 0rem .4rem .6rem -0.1rem, 
  rgba(255, 255, 255, 0.08) 0rem .1rem 0rem;
@@ -684,7 +684,7 @@ z-index: 0rem;display: flex;
      border-radius:3rem;
 }
 .box-container .box:hover{
-    background-color: #1d4354;}
+    background-color: #0ca6ed;}
 
   .parlor h1{
    color: red;
@@ -696,7 +696,7 @@ z-index: 0rem;display: flex;
     font-size: 2rem;
     text-align: center;
     color:white;
-    background-color: #1d4354;
+    background-color: #0ca6ed;
        box-shadow: rgba(6, 24, 44, 0.4) 0rem 0rem 0rem .2rem, 
  rgba(6, 24, 44, 0.65) 0rem .4rem .6rem -0.1rem, 
  rgba(255, 255, 255, 0.08) 0rem .1rem 0rem;

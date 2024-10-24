@@ -9,7 +9,7 @@ include("functions/functions.php");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ganpati Cosmetics</title>
+    <title>Pensil Ajaib</title>
 
     <!-- Meta viewport for responsiveness -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
