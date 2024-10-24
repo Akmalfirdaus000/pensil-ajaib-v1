@@ -33,7 +33,7 @@ html{
 .heading{
    
     
-    border-bottom: .4rem solid #1d4354;
+    border-bottom: .4rem solid #0ca6ed;
     margin:;
     
 
@@ -44,7 +44,7 @@ html{
     font-weight: 100;
     padding:;
     color:#fff;
-    background: #1d4354;
+    background: #red;
     border-top-right-radius:45rem ;
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius:1 ;
@@ -126,7 +126,7 @@ header .header-1 .form-container form label:hover{
                                                                  /*second project start*/
 .btn {
  
-  background-color: #1d4354;
+  background-color: #0ca6ed;
 
   color: #fff;
   padding: .10rem .20rem;
@@ -220,7 +220,7 @@ margin: 1rem;
      
           } 
   .buttons .btn-default{
-        background-color:#1d4354;
+        background-color:#0ca6ed;
         text-decoration-color: white;
         color: white;
         /* margin: .5rem; */
@@ -239,7 +239,7 @@ margin: 1rem;
         color: #ffffff;
         margin: .5rem;
         /* margin-left: 5.5rem; */
-        background-color:#1d4354;
+        background-color:#0ca6ed;
         border-radius: 5px;
              }
  .buttons .btn-primary:hover{
@@ -254,24 +254,24 @@ margin: 1rem;
                                            /*second project end*/
 /* Green 
 .sucess {
-  border-color: #1d4354;
+  border-color: #0ca6ed;
   color: green;
   margin-right: ;
   margin-left: 42rem;
 }
 
 .sucess:hover {
-  background-color: #1d4354;
+  background-color: #0ca6ed;
   color: white;
 }
 
 /* Blue 
 .inf {
-  border-color: #1d4354;
+  border-color: #0ca6ed;
   color: dodgerblue;
 }
 .inf:hover {
-  background: #1d4354;
+  background: #0ca6ed;
   color: white;
 }
 .topnav a.icon {
@@ -283,14 +283,18 @@ margin: 1rem;
    height: 2rem;
 
 
+
+}
+.navbar{
+  background: #0a4c6a;
 }
 
 .navbar ul{
    list-style: none;
    margin: 0;
-   padding: 10px;
+   padding: 3px;
    overflow: hidden;
-     background: #1d4354;
+   
     /* background:
       repeating-linear-gradient(190deg, rgba(255, 0, 0, 0.5) 40px,
         rgba(255, 153, 0, 0.5) 80px, rgba(255, 255, 0, 0.5) 120px,
@@ -312,7 +316,7 @@ margin: 1rem;
    /* position: -webkit-sticky; Safari */
    position: sticky;
    top: 0; 
-   box-shadow: rgba(0, 0, 1, 10.35) 0rem .5rem 3.5rem;
+   /* box-shadow: rgba(0, 0, 1, 10.35) 0rem .5rem 3.5rem; */
    /* background-color:red; */
    /* z-index: 20000; */
 
@@ -336,18 +340,40 @@ margin: 1rem;
 }
 
 
-.navbar li a:hover{
-   color:black;
-   background: #fff;
-    text-decoration: ;
-    border-radius:10px
-
-
+.navbar li a {
+  position: relative;
+  display: inline-block;
+  padding: 5px 10px;
+  color: #000; /* Warna default */
+  text-decoration: none;
+  transition: color 0.3s ease; /* Animasi perubahan warna */
 }
-.navbar .active{
-    margin-left: ;
-    border-radius:10px
-    /* background-color: pink; */
+
+.navbar li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ffa600; /* Warna garis bawah */
+  transition: width 0.3s ease; /* Animasi muncul garis bawah */
+}
+
+.navbar li a:hover {
+  color: #ffa600;
+
+  border-radius: 10px;
+}
+
+.navbar li a:hover::after {
+  width: 100%; /* Garis bawah muncul secara penuh saat hover */
+}
+
+
+
+.nav-link active{
+  color: #ffa600;
 }
 
 /*
@@ -374,13 +400,13 @@ margin: 1rem;
 
 .icons a:hover{
     
-     background-color: #1d4354;
+     background-color: #0ca6ed;
      color: #6fda44;
 }
 */
 
 .header-2 #{
-    font-size: 3rem;
+    font-size: 1rem;
     color:#fff;
     cursor: pointer;
     display: none;
@@ -444,6 +470,45 @@ margin-left: -1.6rem;
 width: 1010px;
 
 }
+
+/* Global styles for better margin and spacing */
+header {
+  margin-bottom: 20px; /* Adds space between navbar and the content below */
+}
+
+/* Home section */
+.home {
+  margin-top: 80px; /* Adjusts the space between the navbar and home section for desktop */
+}
+
+/* Mobile-specific styling */
+@media (max-width: 768px) {
+  /* Navbar adjustments */
+  .navbar {
+      padding: 15px; /* Adjust padding for better space */
+  }
+
+  .navbar-brand img {
+      width: 50px;
+      height: 50px; /* Smaller logo for mobile */
+  }
+
+  /* Home section */
+  .home {
+      margin-top: 120px; /* Increase margin for better separation */
+  }
+
+  .header-1 .offer {
+      font-size: 18px; /* Adjust font size for smaller screens */
+  }
+
+  /* Adjust the slider container to ensure good spacing */
+  .slideshow-container {
+      margin-top: 30px; /* Adds space between the navbar and slider */
+  }
+}
+
+
 .dot {
   cursor: pointer;
   height: 10px;
@@ -456,7 +521,9 @@ width: 1010px;
 }
 
 .active, .dot:hover {
-  background-color: #717171;
+  /* background-color: #717171; */
+   color: #ffa600;
+   
 }
 /* NEW THIS WEEK START */
 /* new this week section start */
@@ -465,7 +532,7 @@ width: 1010px;
   text-transform: uppercase;
   font-size: 36px;
   color: #fff;
-  background-color: #1d4354;
+  background-color: #0ca6ed;
   font-weight: 100;
   text-align: center; 
   margin-top: rem;
@@ -545,7 +612,7 @@ transform:;
      
           } 
   .col-sm-4 .row .product .buttons .btn-default{
-        background-color:#1d4354;
+        background-color:#0ca6ed;
         text-decoration-color: white;
         color: white;
         margin: .5rem;
@@ -564,7 +631,7 @@ transform:;
         color: #ffffff;
         margin: .5rem;
         margin-left: 5.5rem;
-        background-color:#1d4354;
+        background-color:#0ca6ed;
         border-radius: 5px;
              }
  .col-sm-4 .row .product .buttons .btn-primary:hover{
@@ -727,7 +794,7 @@ padding-bottom: 2rem;
     border-radius:3rem;
 }
 .box-container .box:hover{
-    background-color: #1d4354;}
+    background-color: #0ca6ed;}
 
   .arrival h1{
    color: red;
@@ -739,7 +806,7 @@ padding-bottom: 2rem;
     font-size: 2rem;
     text-align: center;
     color:white;
-    background-color: #1d4354;
+    background-color: #0ca6ed;
        box-shadow: rgba(6, 24, 44, 0.4) 0rem 0rem 0rem .2rem, 
  rgba(6, 24, 44, 0.65) 0rem .4rem .6rem -0.1rem, 
  rgba(255, 255, 255, 0.08) 0rem .1rem 0rem;
@@ -801,7 +868,7 @@ padding-bottom: 2rem;
      border-radius:3rem;
 }
 .box-container .box:hover{
-    background-color: #1d4354;}
+    background-color: #0ca6ed;}
 
   .parlor h1{
    color: red;
@@ -813,7 +880,7 @@ padding-bottom: 2rem;
     font-size: 2rem;
     text-align: center;
     color:white;
-    background-color: #1d4354;
+    background-color: #0ca6ed;
        box-shadow: rgba(6, 24, 44, 0.4) 0rem 0rem 0rem .2rem, 
  rgba(6, 24, 44, 0.65) 0rem .4rem .6rem -0.1rem, 
  rgba(255, 255, 255, 0.08) 0rem .1rem 0rem;
@@ -873,7 +940,7 @@ padding-bottom: 2rem;
      border-radius:3rem;
 }
 .box-container .box:hover{
-    background-color: #1d4354;}
+    background-color: #0ca6ed;}
 
   .arrival h1{
    color: red;
@@ -885,7 +952,7 @@ padding-bottom: 2rem;
     font-size: 2rem;
     text-align: center;
     color:white;
-    background-color: #1d4354;
+    background-color: #0ca6ed;
        box-shadow: rgba(6, 24, 44, 0.4) 0rem 0rem 0rem .2rem, 
  rgba(6, 24, 44, 0.65) 0rem .4rem .6rem -0.1rem, 
  rgba(255, 255, 255, 0.08) 0rem .1rem 0rem;
@@ -944,7 +1011,7 @@ padding-bottom: 2rem;
      border-radius:3rem;
 }
 .box-container .box:hover{
-    background-color: #1d4354;}
+    background-color: #0ca6ed;}
 
   .parlor h1{
    color: red;
@@ -956,7 +1023,7 @@ padding-bottom: 2rem;
     font-size: 2rem;
     text-align: center;
     color:white;
-    background-color: #1d4354;
+    background-color: #0ca6ed;
        box-shadow: rgba(6, 24, 44, 0.4) 0rem 0rem 0rem .2rem, 
  rgba(6, 24, 44, 0.65) 0rem .4rem .6rem -0.1rem, 
  rgba(255, 255, 255, 0.08) 0rem .1rem 0rem;
@@ -1107,7 +1174,7 @@ padding-bottom: 2rem;
     /* padding:10px; */
     /* outline: none; */
     border:none;
-    background:#1d4354 ;
+    background:#0ca6ed ;
     font-size: 2rem;
     color:#fff;
     margin:10px;
@@ -1120,7 +1187,7 @@ padding-bottom: 2rem;
     /* padding:0 1rem; */
     outline: none;
     border:none;
-    background:#1d4354;
+    background:#0ca6ed;
     font-size: 2rem;
     color:#fff;
     margin:10px;
@@ -1134,7 +1201,7 @@ padding-bottom: 2rem;
     /* padding:0 1rem; */
     outline: none;
     border:none;
-    background:#1d4354;
+    background:#0ca6ed;
     font-size: 2rem;
     color:#fff;
     margin:10px;
@@ -1195,7 +1262,7 @@ width: 30rem;
  z-index: 0;
  color: #fff;
  border-radius: 1rem;
- background-color: #1d4354;
+ background-color: #0ca6ed;
 }
 .breadcrumb span{
 text-align: center;
@@ -1247,7 +1314,7 @@ float: left;
   font-size: 23px;
   width: ;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
-  background-color: #1d4354;
+  background-color: #0ca6ed;
 }
 .panel-body .active{
  color: #0a4c6a;
@@ -1346,7 +1413,7 @@ text-align: center;
             }
         .pagination :hover{
              color:#ffffff; 
-             background-color: #1d4354;
+             background-color: #0ca6ed;
             }
 
   
@@ -1733,13 +1800,13 @@ color: #fff;
   width: 20%;
 }
 .table tr th{
-   /* border-bottom: . solid #1d4354; */
+   /* border-bottom: . solid #0ca6ed; */
   padding:20px ;
 
 }
 .table tr td{
   /* text-align: center; */
-  border-bottom: .1rem solid #1d4354;
+  border-bottom: .1rem solid #0ca6ed;
 }
  .box-footer{
 
@@ -1755,7 +1822,7 @@ padding: 4rem;
 
 .headlin{
 background-color: lightblue;
-border-bottom: .1rem solid #1d4354;
+border-bottom: .1rem solid #0ca6ed;
 margin-top:  18rem;
 text-align: center;
 }
@@ -1807,7 +1874,7 @@ margin: auto;
   
   width:auto;
   
-  background-color: #1d4354;
+  background-color: #0ca6ed;
 }
 .panel-bdy .active{
  color: #0a4c6a;
@@ -1993,7 +2060,7 @@ padding: .5rem;
   box-shadow: none;
 }
 .footer{
-  background-color: #1d4354;
+  background-color: #0ca6ed;
     padding: 70px ;
     margin-top: 3rem;
     position: relative;
