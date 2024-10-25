@@ -92,19 +92,51 @@ function getPro()
 
 		// Tampilan produk dengan Bootstrap card
 		echo "
-        <div class='col-md-4 col-sm-6'>
-            <div class='card h-100 shadow-sm'>
-                <a href='details.php?pro_id=$pro_id'>
-                    <img src='admin_area/product_images/$pro_img1' class='card-img-top img-fluid' alt='$pro_title' style='height: 250px; object-fit: cover;'>
-                </a>
-                <div class='card-body'>
-                    <h5 class='card-title'>$pro_title</h5>
-                    <p class='card-text text-success fw-bold'>INR $pro_price</p>
+        <div class='col-md-4 col-sm-6 mb-4'>
+            <div class='card h-100 shadow-sm border-0'>
+                <div class='card-img-top position-relative'>
+                    <a href='#' data-bs-toggle='modal' data-bs-target='#productModal$pro_id'>
+                        <img src='admin_area/product_images/$pro_img1' class='img-fluid rounded-top' alt='$pro_title' style='height: 250px; object-fit: cover;'>
+                    </a>
+                    <span class='badge bg-success position-absolute top-0 start-0 m-2'>New</span>
+                </div>
+                <div class='card-body text-center'>
+                    <h5 class='card-title text-truncate'>$pro_title</h5>
+                    <p class='card-text text-success fw-bold fs-5'>INR $pro_price</p>
                     <div class='d-grid gap-2'>
-                        <a href='details.php?pro_id=$pro_id' class='btn btn-outline-primary'>View Details</a>
-                        <a href='details.php?pro_id=$pro_id' class='btn btn-primary'>
-                            <i class='fa fa-shopping-cart'></i> Add to Cart
-                        </a>
+                        <a href='#' data-bs-toggle='modal' data-bs-target='#productModal$pro_id' class='btn btn-outline-primary'>View Details</a>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Bootstrap 5.3 -->
+        <div class='modal fade' id='productModal$pro_id' tabindex='-1' aria-labelledby='productModalLabel$pro_id' aria-hidden='true'>
+            <div class='modal-dialog modal-lg'>
+                <div class='modal-content'>
+                    <div class='modal-header'>
+                        <h5 class='modal-title' id='productModalLabel$pro_id'>$pro_title</h5>
+                        <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
+                    </div>
+                    <div class='modal-body'>
+                        <div class='row'>
+                            <div class='col-md-6'>
+                                <img src='admin_area/product_images/$pro_img1' class='img-fluid rounded' alt='$pro_title'>
+                            </div>
+                            <div class='col-md-6'>
+                                <h4 class='text-success'>INR $pro_price</h4>
+                                <p class='text-muted'>This is a brief description of the product. It can contain key features or a short overview that will attract customers.</p>
+                                <div class='d-grid gap-2'>
+                                    <a href='details.php?pro_id=$pro_id' class='btn btn-primary'>
+                                        <i class='fa fa-shopping-cart'></i> Add to Cartsss
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='modal-footer'>
+                        <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>Close</button>
                     </div>
                 </div>
             </div>
@@ -112,7 +144,6 @@ function getPro()
         ";
 	}
 }
-
 
 
 
