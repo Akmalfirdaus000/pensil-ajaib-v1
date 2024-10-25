@@ -55,11 +55,14 @@ include("functions/functions.php");
                 <div class="container-fluid">
                     <!-- Company Logo on the left -->
                     <a class="navbar-brand me-3" href="index.php">
-                        <img src="website/all/pensilajaib.png" alt="Company Logo" width="70" height="70" class="d-inline-block align-text-top">
+                        <img src="website/all/pensilajaib.png" alt="Company Logo" width="70" height="70"
+                            class="d-inline-block align-text-top">
                     </a>
 
                     <!-- Toggle button for mobile view -->
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false"
+                        aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
 
@@ -101,11 +104,7 @@ include("functions/functions.php");
                                 }
                                 ?>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="cart.php">
-                                    <i class="fa fa-shopping-cart"></i> Goto Cart
-                                </a>
-                            </li>
+
                             <li class="nav-item">
                                 <?php
                                 if (!isset($_SESSION['customer_email'])) {
@@ -259,9 +258,12 @@ include("functions/functions.php");
                 <div class="footer-ol">
                     <h4>follow us</h4>
                     <div class="social-links">
-                        <a href="https://www.facebook.com/profile.php?id=100093616384522"><i class="fab fa-facebook-f fa-2x" style="color: #3b5998;"></i></a>
-                        <a href="mailto:youremail@example.com"><i class="fas fa-envelope fa-2x" style="color: #0084b4;"></i></a>
-                        <a href="https://www.instagram.com/pensilajaib.std/"><i class="fab fa-instagram fa-2x" style="color:   #E1306C;"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=100093616384522"><i
+                                class="fab fa-facebook-f fa-2x" style="color: #3b5998;"></i></a>
+                        <a href="mailto:youremail@example.com"><i class="fas fa-envelope fa-2x"
+                                style="color: #0084b4;"></i></a>
+                        <a href="https://www.instagram.com/pensilajaib.std/"><i class="fab fa-instagram fa-2x"
+                                style="color:   #E1306C;"></i></a>
 
 
                     </div>
@@ -305,37 +307,37 @@ include("functions/functions.php");
     <script src="main/js.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script>
-        var slideIndex = 1;
-        showSlides(slideIndex);
+    var slideIndex = 1;
+    showSlides(slideIndex);
 
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+            slideIndex = 1
         }
-
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
+        if (n < 1) {
+            slideIndex = slides.length
         }
-
-        function showSlides(n) {
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            var dots = document.getElementsByClassName("dot");
-            if (n > slides.length) {
-                slideIndex = 1
-            }
-            if (n < 1) {
-                slideIndex = slides.length
-            }
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " active";
-
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
         }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+
+    }
     </script>
 
 
