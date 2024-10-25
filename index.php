@@ -26,6 +26,11 @@ include("functions/functions.php");
 </head>
 
 <body>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <a href="https://api.whatsapp.com/send?phone=51955081075&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202."
+        class="float" target="_blank">
+        <i class="fa fa-whatsapp my-float"></i>
+    </a>
 
     <!-- header section starts  -->
     <div class="header-1">
@@ -46,11 +51,14 @@ include("functions/functions.php");
                 <div class="container-fluid">
                     <!-- Company Logo on the left -->
                     <a class="navbar-brand me-3" href="index.php">
-                        <img src="website/all/pensilajaib.png" alt="Company Logo" width="70" height="70" class="d-inline-block align-text-top">
+                        <img src="website/all/pensilajaib.png" alt="Company Logo" width="70" height="70"
+                            class="d-inline-block align-text-top">
                     </a>
 
                     <!-- Toggle button for mobile view -->
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false"
+                        aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
 
@@ -60,9 +68,9 @@ include("functions/functions.php");
                             <li class="nav-item">
                                 <a class="nav-link active" href="index.php">Beranda</a>
                             </li>
-                            <li class="nav-item">
+                            <!-- <li class="nav-item">
                                 <a class="nav-link" href="#footer">Tentang Kita</a>
-                            </li>
+                            </li> -->
                             <li class="nav-item">
                                 <a class="nav-link" href="trimer.php">Orderan</a>
                             </li>
@@ -217,28 +225,7 @@ include("functions/functions.php");
 
 
 
-    <!-- newsletter section starts  -->
 
-    <section class="newsletter" id="newsletter">
-
-        <h1>Newsletter</h1>
-        <p>Get In Touch For Latest Discounts And Updates</p>
-        <form action="contactus.php" method="post">
-
-
-            <input type="text" placeholder="Enter Your Name"><br>
-
-
-            <input type="email" placeholder="Enter Your Email">
-
-            <textarea type="txt" placeholder="Enter Your Message"></textarea>
-
-            <input type="submit" class="btn">
-        </form>
-
-    </section>
-
-    <!-- newsletter section ends -->
 
     <!-- footer section starts  -->
 
@@ -253,47 +240,43 @@ include("functions/functions.php");
                 <div class="footer-ol">
                     <h4>company</h4>
                     <ul>
-                        <li><a href="#">about us</a></li><br><br>
-                        <li><a href="#">our services</a></li><br><br>
-                        <li><a href="#">privacy policy</a></li><br><br>
-                        <li><a href="#">affiliate program</a></li><br><br>
+                        <li><a href="#" style="color: #fff;">Beranda</a></li><br><br>
+                        <li><a href="#" style="color: #fff;">Tentang Kami</a></li><br><br>
+                        <li><a href="#" style="color: #fff;">Orderan</a></li><br><br>
+                        <li><a href="#" style="color: #fff;">Kontak</a></li><br><br>
                     </ul>
                 </div>
+
                 <div class="footer-ol">
-                    <h4>get help</h4>
+                    <h4>Kategori Produk</h4>
                     <ul>
-                        <li><a href="#">FAQ</a></li><br><br>
-                        <li><a href="#">shipping</a></li><br><br>
-                        <li><a href="#">returns</a></li><br><br>
-                        <li><a href="#">order status</a></li><br><br>
-                        <li><a href="#">payment options</a></li><br><br>
-                    </ul>
-                </div>
-                <div class="footer-ol">
-                    <h4>online shop</h4>
-                    <ul>
-                        <li><a href="#">Saloon Products</a></li><br><br>
-                        <li><a href="#">Parlor Prtoducts</a></li><br><br>
-                        <li><a href="#">Garments</a></li><br><br>
-                        <li><a href="#">Others</a></li><br><br>
+                        <li><a href="#" style="color: #fff;">Desaign Logo</a></li><br><br>
+                        <li><a href="#" style="color: #fff;">Web Desaigner</a></li><br><br>
+
                     </ul>
                 </div>
                 <div class="footer-ol">
                     <h4>follow us</h4>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f fa-x" style="color: #3b5998;"></i></a>
-                        <a href="#"><i class="fab fa-twitter fa-x" style="color: #0084b4;"></i></a>
-                        <a href="#"><i class="fab fa-instagram fa-x" style="color:   #E1306C;"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in fa-x" style="color:  #0077B5 ;"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=100093616384522"><i
+                                class="fab fa-facebook-f fa-2x" style="color: #3b5998;"></i></a>
+                        <a href="mailto:youremail@example.com"><i class="fas fa-envelope fa-2x"
+                                style="color: #0084b4;"></i></a>
+                        <a href="https://www.instagram.com/pensilajaib.std/"><i class="fab fa-instagram fa-2x"
+                                style="color:   #E1306C;"></i></a>
+
 
                     </div>
                 </div>
                 <div class="pal">
 
                 </div>
-                <p class="credit">Copyright &copy; <span>2015-2024</span> | all rights reserved. |
-                    <span>Designed By GWS Tutor</span>
+                <p class="credit text-center mb-0">
+                    Copyright &copy; <span><?php echo date("Y"); ?></span> | all rights reserved. |
+                    <span class="fw-bold">Designed By Pensil Ajaib</span>
                 </p>
+
+
             </div>
         </div>
     </footer>
@@ -304,6 +287,8 @@ include("functions/functions.php");
     </nav>
     </div>
     </header>
+
+
 
     <!-- Bootstrap 5.3 JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -322,37 +307,37 @@ include("functions/functions.php");
     <script src="main/js.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script>
-        var slideIndex = 1;
-        showSlides(slideIndex);
+    var slideIndex = 1;
+    showSlides(slideIndex);
 
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+            slideIndex = 1
         }
-
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
+        if (n < 1) {
+            slideIndex = slides.length
         }
-
-        function showSlides(n) {
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            var dots = document.getElementsByClassName("dot");
-            if (n > slides.length) {
-                slideIndex = 1
-            }
-            if (n < 1) {
-                slideIndex = slides.length
-            }
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " active";
-
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
         }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+
+    }
     </script>
 
 

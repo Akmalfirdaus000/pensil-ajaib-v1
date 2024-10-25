@@ -2134,10 +2134,11 @@ padding: .5rem;
  color: #fff;
 }
 .credit{
-  margin-left: 58rem;
+  margin-left: 2rem;
   color: #fff;
   font-size: 1.6rem;
 margin-top: 2rem;
+text-align: center;
 }
 .credit span{
   color: #e91e;
@@ -2158,3 +2159,39 @@ margin-top: 2rem;
 
 
 /* Footer Section End */
+
+
+/* floating whastaapp */
+/* floating whatsapp */
+.float {
+	position: fixed;
+	width: 60px;
+	height: 60px;
+	bottom: 40px;
+	right: 40px;
+	background-color: #25d366;
+	color: #FFF;
+	border-radius: 50px;
+	text-align: center;
+	font-size: 30px;
+	box-shadow: 2px 2px 3px #999;
+	z-index: 100;
+	animation: float 3s ease-in-out infinite;
+}
+
+.my-float {
+	margin-top: 16px;
+}
+
+/* Keyframes untuk animasi floating */
+@keyframes float {
+	0% {
+		transform: translateY(0px);
+	}
+	50% {
+		transform: translateY(-10px);
+	}
+	100% {
+		transform: translateY(0px);
+	}
+}
