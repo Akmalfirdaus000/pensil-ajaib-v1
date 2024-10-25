@@ -21,7 +21,7 @@ if (!isset($_SESSION['admin_email'])){
 		<div class="breadcrump">
 			<li class="active">
 				<i class="fa fa-bar-chart"></i>
-				Dashboard / Insert Product
+				Dashboard / Tambah Orderan
 			</li>
 		</div>
 	</div>
@@ -34,17 +34,17 @@ if (!isset($_SESSION['admin_email'])){
 		<div class="panel panel-default">
 			<div class="panel-heading"><!--panel-heading start-->
 				<h3 class="panel-title">
-					<i class="fa fa-money fa-fw"> Insert Product </i>
+					<i class="fa fa-money fa-fw"> Tambah Orderan </i>
 				</h3>
 			</div><!--panel-heading End-->
 			<div class="panel-body">
 				<form class="form-horizontal" method="post" action="" enctype="multipart/form-data">
 					<div class="form-group">
-						<label class="col-md-3 control-label">Product Title</label>
+						<label class="col-md-3 control-label">Judul</label>
 						<input type="text" name="product_title" class="form-control" required="">
 					</div>
 					<div class="form-group">
-						<label class="col-md-3 control-label">Product Category</label>
+						<label class="col-md-3 control-label">Kategori Orderan</label>
 						<select name="product_cat" class="form-control">
 							<option>Select a Product Category</option>
 
@@ -63,7 +63,7 @@ if (!isset($_SESSION['admin_email'])){
 						</select>
 					</div>
 					<div class="form-group">
-						<label class="col-md-3 control-label">Categories</label>
+						<label class="col-md-3 control-label">Kategori Menu</label>
 						<select name="cat" class="form-control">
 							<option>Select Categories</option>
 
@@ -82,27 +82,27 @@ if (!isset($_SESSION['admin_email'])){
 						</select>
 					</div>
 					<div class="form-group">
-						<label class="col-md-3 control-label">Product Image 1</label>
+						<label class="col-md-3 control-label">Foto 1 1</label>
 						<input type="file" name="product_img1" class="form-control" required="">
 					</div>
 					<div class="form-group">
-						<label class="col-md-3 control-label">Product Image 2</label>
+						<label class="col-md-3 control-label">Foto 1 2</label>
 						<input type="file" name="product_img2" class="form-control" required="">
 					</div>
 					<div class="form-group">
-						<label class="col-md-3 control-label">Product Image 3</label>
+						<label class="col-md-3 control-label">Foto 1 3</label>
 						<input type="file" name="product_img3" class="form-control" required="">
 					</div>
 					<div class="form-group">
-						<label class="col-md-3 control-label">Product Price</label>
+						<label class="col-md-3 control-label">Harga</label>
 						<input type="text" name="product_price" class="form-control" required="">
 					</div>
-					<div class="form-group">
-						<label class="col-md-3 control-label">Product Keyword</label>
+					<!-- <div class="form-group">
+						<label class="col-md-3 control-label">Keyword Orderan</label>
 						<input type="text" name="product_keyword" class="form-control" required="">
-					</div>
+					</div> -->
 					<div class="form-group">
-						<label class="col-md-3 control-label">Product Description</label>
+						<label class="col-md-3 control-label">Deskripsi</label>
 						<textarea name="product_desc" class="form-control" rows="6" cols="19"></textarea>
 					</div>
 					<div class="form-group">

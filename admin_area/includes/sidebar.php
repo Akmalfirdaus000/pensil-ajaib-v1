@@ -85,14 +85,14 @@ if (!isset($_SESSION['admin_email'])){
   </li>
 
  <li class="button-dropdown">
-    <a href="#" class="dropdown-toggle" data-toggle="collapse" data-target="#users"><i class="fa fa-fw fa-table"></i>  Users <i class="fa fa-fw fa-caret-down"></i></a>
+    <a href="#" class="dropdown-toggle" data-toggle="collapse" data-target="#users"><i class="fa fa-fw fa-table"></i>  Karyawan <i class="fa fa-fw fa-caret-down"></i></a>
 
     <ul id="#users" class="dropdown-menu">
       <li>
-        <a href="index.php?insert_user">Insert User</a>
+        <a href="index.php?insert_user">Tambah Karyawan</a>
       </li>
       <li>
-        <a href="index.php?view_user">view User</a>
+        <a href="index.php?view_user">Lihat Karyawan</a>
       </li>
       <li>
         <a href="index.php?user_profile=<?php echo $admin_id ?>">Edit Profile</a>

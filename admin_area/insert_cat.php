@@ -12,7 +12,7 @@ if (!isset($_SESSION['admin_email'])){
 		<div class="breadcrump">
 			<li class="active">
 				<i class="fa fa-bar-chart"></i>
-				Dashboard / Insert Category
+				Dashboard / Tambah Kategori
 			</li>
 		</div>
 	</div>
@@ -25,7 +25,7 @@ if (!isset($_SESSION['admin_email'])){
 		<div class="panel panel-default">
 			<div class="panel-heading"><!--panel-heading start-->
 				<h3 class="panel-title">
-					<i class="fa fa-money fa-fw"> Insert Category </i>
+					<i class="fa fa-money fa-fw"> Tambah Kategori </i>
 				</h3>
 			</div><!--panel-heading End-->
 			<div class="panel-body">
