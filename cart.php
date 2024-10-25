@@ -25,9 +25,9 @@ include("functions/functions.php");
 <!-- Header Section Starts -->
 <header>
     <div class="header-1">
-        <a href="index.php" class="logo">
+        <!-- <a href="index.php" class="logo">
             <img src="website/all/logo5.svg" alt="Logo image" class="hidden-xs">
-        </a>
+        </a> -->
         <div class="col-md-6 offer">
             <a href="#" class="btn btn-sucess btn-sm">
                 <?php
@@ -47,13 +47,13 @@ include("functions/functions.php");
     <div class="header-2">
         <nav class="navbar"> 
             <ul>
-                <li><a href="index.php">HOME</a></li>
-                <li><a href="trimer.php">SHOP</a></li>
-                <li><a href="contactus.php">CONTACT</a></li>
+                <li><a href="index.php">Awal</a></li>
+                <li><a href="trimer.php">Orderan</a></li>
+                <li><a href="contactus.php">Kontak</a></li>
 
                 <div class="col-md-6">
                     <ul class="menu">
-                        <li>
+                        <!-- <li>
                             <div class="collapse clearfix" id="search">
                                 <form class="navbar-form" method="get" action="result.php">
                                     <div class="input-group">
@@ -64,7 +64,7 @@ include("functions/functions.php");
                                     </div>
                                 </form>
                             </div>
-                        </li>
+                        </li> -->
 
                         <li>
                             <a href="cart.php">
@@ -72,7 +72,7 @@ include("functions/functions.php");
                                 <span><?php item(); ?> items in cart</span>
                             </a>
                         </li>
-                        <li><a href="customer_registration.php"><i class="fa fa-user-plus"></i>Register</a></li>
+                        <!-- <li><a href="customer_registration.php"><i class="fa fa-user-plus"></i>Register</a></li> -->
                         <li>
                             <?php
                             if (!isset($_SESSION['customer_email'])) {

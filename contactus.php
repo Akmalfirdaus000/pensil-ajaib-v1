@@ -24,7 +24,37 @@ include("functions/functions.php");
     <!-- custom css file link  -->
     <link rel="stylesheet" href="style.css">
   <style>
+.admin-container {
+  margin: auto;
+  margin-top:20rem ;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  max-width: 750px;
+  text-align: center;
+}
 
+/* Admin Card Styles */
+.admin-card {
+  background: linear-gradient(90deg, #ff6a88, #ff99ac);
+  color: #ffffff;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  font-size: 18px;
+  position: relative;
+}
+
+/* Icon Before Each Admin */
+.admin-card::before {
+  content: "👤";
+  position: absolute;
+  left: -35px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+}
 
   </style>
  
@@ -37,7 +67,7 @@ include("functions/functions.php");
 
 <div class="header-1">
 
-    <a href="index.php" class="logo" > <img src="website/all/logo5.svg" alt="Logo image" class="hidden-xs">  </a>
+    <!-- <a href="index.php" class="logo" > <img src="website/all/logo5.svg" alt="Logo image" class="hidden-xs">  </a> -->
                                
 <div class="col-md-6 offer">
     <a href="#" class="btn btn-sucess btn-sm">
@@ -65,15 +95,15 @@ include("functions/functions.php");
 
      <ul >
        
-            <li><a  href="index.php">HOME</a></li>
-            <li><a  href="trimer.php">SHOP</a></li>
+            <li><a  href="index.php">Awal</a></li>
+            <li><a  href="trimer.php">Orderan</a></li>
            
-            <li><a class="active" href="contactus.php">CONTACT</a></li>
+            <li><a class="active" href="contactus.php">Kontak</a></li>
           
  
        <div class="col-md-6">
         <ul class="menu">
-            <li>
+            <!-- <li>
                          <div class="collapse clearfix" id="search">
                              <form class="navbar-form" method="get" action="result.php">
                                  <div class="input-group">
@@ -84,7 +114,7 @@ include("functions/functions.php");
                                  </div>
                              </form>
                          </div>
-                   </li>
+                   </li> -->
 
 
 
@@ -96,8 +126,8 @@ include("functions/functions.php");
                 </li>
                    
 
-                   <li>
-                   <a  href="customer_registration.php"><i class="fa fa-user-plus"></i>Register</a></li>
+                   <!-- <li>
+                   <a  href="customer_registration.php"><i class="fa fa-user-plus"></i>Register</a></li> -->
                    <li>
                    <?php
 
@@ -138,81 +168,13 @@ include("functions/functions.php");
 
 <!-- header section End  -->
 
-<section class="content" id="content">
-  <div class="container">
-    <div class="col-md-12">
-      <ul class="breadcrumb">
-     
-        <li><span>Contact Us</span></li>
-        
-
-      </ul>
-
-    </div>
-</div></section>  
+ 
+        <div class="admin-container">
+          <h1>Kontak Admin</h1>
+  <h2 class="admin-card">Admin 1 Akmal : 0829192192192</h2>
+  <h2 class="admin-card">Admin 2 Akmal : 0829192192192</h2>
+  <h2 class="admin-card">Admin 3 Akmal : 0829192192192</h2>
+</div>
     
-  <div class="c-9">
-    <div class="rx">
-      <div class="box-header">
-        <center>
-          <h2>Contact to Us</h2>
-          <p>If you have any questions, please feel free to contact us, our customer service center is working for you 24/7.</p>
-        </center>
-      </div>
-      <div>
-        <form action="contactus.php" method="post">
-          <div class="roup">
-            <label>Name</label>
-            <input type="text" name="name" required="" class="form-control">
-          </div>
-          <div class="roup">
-            <label>Email</label>
-            <input type="text" name="email" class="form-control" required="">
-            
-          </div>
-          <div class="roup">
-            <label>Subject</label>
-            <input type="text" name="submit" class="form-control" required="">
-          </div>
-          <div class="roup">
-            <label>Massage</label>
-            <textarea class="form-control" name="massage"></textarea>
-          </div>
-          <div class="text-center">
-            <button type="submit" name="submit" class="btn btn-primary">
-              
-              <i class="fa fa-user-md"></i> Send message
-            </button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-  
 
-     <!-- footer section starts  -->
-   <?php
-      include("includes/footer.php");  
-      ?>
-<!-- footer section   -->
-
-</body></html>
-
-<?php
-if(isset($_POST['submit'])){
-$senderName=$_POST['name'];
-$senderEmail=$_POST['email'];
-$senderSubject=$_POST['subject'];
-
-$receiverEmail="rakeshalakh@gmail.com";
-mail($receiverEmail,$senderName,$senderSubject,$senderMassage,$senderEmail);
-//customer mail
-$email=$_POST['email'];
-$subject="Welcome to our website";
-$msg="I shall get you soon , thanks for sending email";
-$from="rakeshalakh@gmail.com";
-mail($email, $subject, $msg, $from);
-echo "<h2 align='center'>Your mail sent</h2>";
-
-}
   ?>
