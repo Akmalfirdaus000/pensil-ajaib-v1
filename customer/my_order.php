@@ -10,12 +10,12 @@
      		<thead>
      			<tr>
      				<th>Sr.No</th>
-     				<th>Due Amount</th>
-     				<th>Invoice Number</th>
-     				<th>Quantity</th>
-     				<th>Size</th>
+     				<!-- <th>Due Amount</th> -->
+     				<th>Orderan Number</th>
+     				<!-- <th>Quantity</th> -->
+     				<!-- <th>Size</th> -->
      				<th>Order Date</th>
-     				<th>Paid/Unpaid</th>
+     				<th>complete / Pending</th>
      				<th>Status</th>
      			</tr>
      		</thead>
@@ -40,19 +40,19 @@
                          $order_status=$row_order['order_status'];
                          $i++;
                          if ($order_status=='pending') {
-                              $order_status='Unpaid';
+                              $order_status='Pending';
                          }else{
-                            $order_status='Paid';  
+                            $order_status='Complete';  
                          }
                    
 
                       ?>
      			<tr>
      				<td><?php echo $i ?></td>
-     				<td><?php echo $order_due_amount ?></td>
+     				<!-- <td><?php echo $order_due_amount ?></td> -->
      				<td><?php echo $order_invoice ?></td>
-     				<td><?php echo $order_qty ?></td>
-     				<td><?php echo $order_size ?></td>
+     				<!-- <td><?php echo $order_qty ?></td> -->
+     				<!-- <td><?php echo $order_size ?></td> -->
      				<td><?php echo $order_date ?></td>
      				<td><?php echo $order_status ?></td>
      				<td><a href="confirm.php?order_id=<?php echo $order_id ?>" target="_blank" class="btn btn-primary btn-sm">confirm Now</a></td>

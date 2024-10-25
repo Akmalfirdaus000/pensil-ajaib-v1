@@ -45,7 +45,7 @@ if (isset($_GET['order_id'])) {
 
 <div class="header-1">
 
-    <a href="../index.php" class="logo" > <img src="../website/all/logo5.svg" alt="Logo image" class="hidden-xs">  </a>
+    <!-- <a href="../index.php" class="logo" > <img src="../website/all/logo5.svg" alt="Logo image" class="hidden-xs">  </a> -->
                                
 <div class="col-md-6 offer">
     <a href="#" class="btn btn-sucess btn-sm">
@@ -73,10 +73,10 @@ if (isset($_GET['order_id'])) {
 
      <ul >
       
-            <li><a  href="../index.php">HOME</a></li>
-            <li><a  href="../trimer.php">SHOP</a></li>
+            <li><a  href="../index.php">Awal</a></li>
+            <li><a  href="../trimer.php">Orderan</a></li>
           
-            <li><a href="../contactus.php">CONTACT</a></li>
+            <li><a href="../contactus.php">Kontak</a></li>
           
  
        <div class="col-md-6">
@@ -104,8 +104,8 @@ if (isset($_GET['order_id'])) {
                 </li>
                    
 
-                   <li>
-                   <a  href="../customer_registration.php"><i class="fa fa-user-plus"></i>Register</a></li>
+                   <!-- <li>
+                   <a  href="../customer_registration.php"><i class="fa fa-user-plus"></i>Register</a></li> -->
                    <li>
                    <?php
 
@@ -160,14 +160,14 @@ if (isset($_GET['order_id'])) {
 </div></section> 
  <div class="co-9">
   <div class="trx">
-    <h1 align="center">Silahkan Confirmasi Orderan Jika Sudah Selesai</h1>
+    <h1 text-align="center">Silahkan Confirmasi Orderan Jika Sudah Selesai</h1>
     <form action="confirm.php?update_id=<?php echo $order_id ?>" method="post" enctype="multipart/form-data">
       <div class="form-group">
         <label> Jumlah Di kerjakan</label>
         <input type="text" class="form-control" name="invoice_number" required="">
       </div>
       <div class="form-group">
-        <label> Amount</label>
+        <label> Isi </label>
         <input type="text" class="form-control" name="amount" required="">
       </div>
       <div class="form-group">
@@ -178,7 +178,7 @@ if (isset($_GET['order_id'])) {
        </select>
       </div>
       <div class="form-group">
-        <label>Transection Number </label>
+        <label> isi </label>
         <input type="text" class="form-control" name="trfr_number" required="">
       </div>
       <div class="form-group">
