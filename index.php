@@ -12,6 +12,10 @@ include("functions/functions.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pensil Ajaib</title>
 
+    <!-- favicon -->
+    <link rel="icon" href="website/all/pensilajaib.ico" type="image/x-icon">
+
+
     <!-- Bootstrap 5.3 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -23,12 +27,13 @@ include("functions/functions.php");
 
     <!-- custom css file link -->
     <link rel="stylesheet" href="style.css">
+
+
 </head>
 
 <body>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <a href="https://api.whatsapp.com/send?phone=51955081075&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202."
-        class="float" target="_blank">
+    <a href="https://api.whatsapp.com/send?phone=6281374660847&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202." class="float" target="_blank">
         <i class="fa fa-whatsapp my-float"></i>
     </a>
 
@@ -51,14 +56,11 @@ include("functions/functions.php");
                 <div class="container-fluid">
                     <!-- Company Logo on the left -->
                     <a class="navbar-brand me-3" href="index.php">
-                        <img src="website/all/pensilajaib.png" alt="Company Logo" width="70" height="70"
-                            class="d-inline-block align-text-top">
+                        <img src="website/all/pensilajaib.png" alt="Company Logo" width="70" height="70" class="d-inline-block align-text-top">
                     </a>
 
                     <!-- Toggle button for mobile view -->
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false"
-                        aria-label="Toggle navigation">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
 
@@ -258,12 +260,9 @@ include("functions/functions.php");
                 <div class="footer-ol">
                     <h4>follow us</h4>
                     <div class="social-links">
-                        <a href="https://www.facebook.com/profile.php?id=100093616384522"><i
-                                class="fab fa-facebook-f fa-2x" style="color: #3b5998;"></i></a>
-                        <a href="mailto:youremail@example.com"><i class="fas fa-envelope fa-2x"
-                                style="color: #0084b4;"></i></a>
-                        <a href="https://www.instagram.com/pensilajaib.std/"><i class="fab fa-instagram fa-2x"
-                                style="color:   #E1306C;"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=100093616384522"><i class="fab fa-facebook-f fa-2x" style="color: #3b5998;"></i></a>
+                        <a href="mailto:youremail@example.com"><i class="fas fa-envelope fa-2x" style="color: #0084b4;"></i></a>
+                        <a href="https://www.instagram.com/pensilajaib.std/"><i class="fab fa-instagram fa-2x" style="color:   #E1306C;"></i></a>
 
 
                     </div>
@@ -307,37 +306,37 @@ include("functions/functions.php");
     <script src="main/js.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script>
-    var slideIndex = 1;
-    showSlides(slideIndex);
+        var slideIndex = 1;
+        showSlides(slideIndex);
 
-    function plusSlides(n) {
-        showSlides(slideIndex += n);
-    }
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
 
-    function currentSlide(n) {
-        showSlides(slideIndex = n);
-    }
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
 
-    function showSlides(n) {
-        var i;
-        var slides = document.getElementsByClassName("mySlides");
-        var dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {
-            slideIndex = 1
-        }
-        if (n < 1) {
-            slideIndex = slides.length
-        }
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].className += " active";
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
 
-    }
+        }
     </script>
 
 
