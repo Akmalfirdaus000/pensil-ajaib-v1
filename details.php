@@ -57,16 +57,20 @@ if (isset($_GET['pro_id'])) {
     <!-- font awesome cdn link  -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- favicon -->
+    <link rel="icon" href="website/all/pensilajaib.ico" type="image/x-icon">
 
     <style>
-        /* Add any additional custom styles here */
+    /* Add any additional custom styles here */
     </style>
 
 </head>
 
 <body>
 
-
+    <?php
+    include("includes/wa.php");
+    ?>
     <div class="header-1">
 
         <!-- <a href="index.php" class="logo" > <img src="website/all/logo5.svg" alt="Logo image" class="hidden-xs">  </a> -->
@@ -85,11 +89,14 @@ if (isset($_GET['pro_id'])) {
                 <div class="container-fluid">
                     <!-- Company Logo on the left -->
                     <a class="navbar-brand me-3" href="index.php">
-                        <img src="website/all/pensilajaib.png" alt="Company Logo" width="70" height="70" class="d-inline-block align-text-top">
+                        <img src="website/all/pensilajaib.png" alt="Company Logo" width="70" height="70"
+                            class="d-inline-block align-text-top">
                     </a>
 
                     <!-- Toggle button for mobile view -->
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false"
+                        aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
 
@@ -166,44 +173,151 @@ if (isset($_GET['pro_id'])) {
 
 
 
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+    }
+    </script>
 
 
     <div class="container mt-4">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="card">
-                    <h1 class="product-title">Judul: <?php echo $p_title; ?></h1>
-
-                    <?php addCart(); // Function to handle cart addition 
-                    ?>
-
-                    <div class="" id="details">
-                        <p class="description text-dark"><?php echo $p_desc; ?></p>
-                        <p class="price">Price: INR <?php echo $p_price; ?></p>
-
+        <div class="card shadow-lg">
+            <div class="row no-gutters">
+                <div class="col-md-6 position-relative">
+                    <div class="slides slider-margin">
+                        <div class="mySlides fade">
+                            <img src="admin_area/product_images/<?php echo $p_img1 ?>" class="img-fluid"
+                                alt="Product Image 1" style="width: 250px; height: auto;">
+                        </div>
+                        <div class="mySlides fade">
+                            <img src="admin_area/product_images/<?php echo $p_img2 ?>" class="img-fluid"
+                                alt="Product Image 2" style="width: 250px; height: auto;">
+                        </div>
+                        <div class="mySlides fade">
+                            <img src="admin_area/product_images/<?php echo $p_img3 ?>" class="img-fluid"
+                                alt="Product Image 3" style="width: 250px; height: auto;">
+                        </div>
+                        <!-- Navigation Arrows -->
+                        <a class="prv" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="net" onclick="plusSlides(1)">&#10095;</a>
+                    </div>
+                    <div class="text-center mt-2">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
                     </div>
                 </div>
-            </div>
 
-            <div class="col-md-6">
-                <form action="details.php?add_cart=<?php echo $pro_id; ?>" method="post" class="order-form">
-                    <p class="order-button">
-                        <button class="btn btn-primary" type="submit">
-                            <i class="fa fa-shopping-cart"></i> Ambil Order
-                        </button>
-                    </p>
-                </form>
+
+                <div class="col-md-6">
+                    <div class="card shadow-sm border-0">
+                        <div class="card-body">
+                            <h1 class="product-title text-primary mb-3 fw-bold"><?php echo $p_title; ?></h1>
+
+                            <?php addCart(); // Function to handle cart addition 
+                            ?>
+
+                            <div id="details" class="mb-4">
+                                <p class="description text-muted"><?php echo $p_desc; ?></p>
+                                <h5 class="price fw-bold">
+                                    Price: <span class="text-success">INR <?php echo $p_price; ?></span>
+                                </h5>
+                            </div>
+
+                            <form action="details.php?add_cart=<?php echo $pro_id; ?>" method="post" class="order-form">
+                                <button
+                                    class="btn btn-primary btn-lg w-100 d-flex align-items-center justify-content-center"
+                                    type="submit">
+                                    <i class="fa fa-shopping-cart me-2"></i> Ambil Order
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
 
+    <footer class="footer" id="footer">
+        <div class="cuntainer">
+            <div class="wolf">
 
+                <div class="footer-ol">
+                    <h4>company</h4>
+                    <ul>
+                        <li><a href="#" style="color: #fff;">Beranda</a></li><br><br>
+                        <li><a href="#" style="color: #fff;">Tentang Kami</a></li><br><br>
+                        <li><a href="#" style="color: #fff;">Orderan</a></li><br><br>
+                        <li><a href="#" style="color: #fff;">Kontak</a></li><br><br>
+                    </ul>
+                </div>
+
+                <div class="footer-ol">
+                    <h4>Kategori Produk</h4>
+                    <ul>
+                        <li><a href="#" style="color: #fff;">Desaign Logo</a></li><br><br>
+                        <li><a href="#" style="color: #fff;">Web Desaigner</a></li><br><br>
+
+                    </ul>
+                </div>
+                <div class="footer-ol">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=100093616384522"><i
+                                class="fab fa-facebook-f fa-2x" style="color: #3b5998;"></i></a>
+                        <a href="mailto:youremail@example.com"><i class="fas fa-envelope fa-2x"
+                                style="color: #0084b4;"></i></a>
+                        <a href="https://www.instagram.com/pensilajaib.std/"><i class="fab fa-instagram fa-2x"
+                                style="color:   #E1306C;"></i></a>
+
+
+                    </div>
+                </div>
+                <div class="pal">
+
+                </div>
+                <p class="credit text-center mb-0">
+                    Copyright &copy; <span><?php echo date("Y"); ?></span> | all rights reserved. |
+                    <span class="fw-bold">Designed By Pensil Ajaib</span>
+                </p>
+
+
+            </div>
+        </div>
+    </footer>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>s
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </html>

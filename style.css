@@ -1422,25 +1422,36 @@ text-align: center;
 
 /*details page start*/
 
+
 .slides {
-  /* height:10px; */
-  /* width: 50rem; */
-  /* margin-left: 45rem; */
-  /* margin-top:60rem; */
-  padding:10px;
-  
-  /* position: relative; */
- 
-  margin-top:35rem;
-  box-shadow: rgba(6, 24, 44, 0.4) 0rem 0rem 0rem .2rem, 
- rgba(6, 24, 44, 0.65) 0rem .4rem .6rem -0.1rem, 
- rgba(255, 255, 255, 0.08) 0rem .1rem 0rem;
- border-radius: 2.5rem;
-  z-index: 0rem;
-  background:;
-  
-  
-  }
+  position: relative;
+  overflow: hidden;
+}
+
+.prv, .net {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px; /* Size of the arrows */
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%; /* Circular button */
+}
+
+.prv {
+  left: 5px; /* Position on the left */
+}
+
+.net {
+  right: 5px; /* Position on the right */
+}
+
+.prv:hover, .net:hover {
+  background-color: rgba(0, 0, 0, 0.7); /* Darken on hover */
+}
 
 
 .slides img{
@@ -1455,29 +1466,7 @@ text-align: center;
 }
 
 
-/* Next & previous buttons */
-.prv, .net {
-  cursor: pointer;
-  /* margin-top:10px; */
-  /* margin-button:10px; */
-  /* position: absolute; */
-  width:100px;
-  /* top: 50%; */
-  /* width: auto; */
-  margin-left:190px;
-  margin-right:250px;
-  top:700px;
-  padding: 1.6rem;
-  margin-top: -2.2rem;
-  color: white;
-  font-weight: bold;
-  font-size: 1.8rem;
-  transition: 0.6s ease;
-  border-radius: 0 .3rem .3rem 0;
-  user-select: none;
-  background-color: rgba(0,0,0,0.8);
 
-}
 
 /* Position the "next button" to the right */
 .net {
