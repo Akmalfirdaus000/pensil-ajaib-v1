@@ -54,75 +54,99 @@ if (isset($_GET['pro_id'])) {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 
+    <!-- font awesome cdn link  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <style>
-    /* Add any additional custom styles here */
+        /* Add any additional custom styles here */
     </style>
 
 </head>
 
 <body>
 
-    <!-- Header section starts -->
-    <header>
-        <div class="header-1">
-            <a href="index.php" class="logo"><img src="website/all/logo5.svg" alt="Logo image" class="hidden-xs"></a>
-            <div class="col-md-6 offer">
-                <a href="#" class="btn btn-sucess btn-sm">
-                    <?php
-                if (!isset($_SESSION['customer_email'])) {
-                    echo "Welcome Guest";
-                } else {
-                    echo "Welcome: " . $_SESSION['customer_email'];
-                }
-                ?>
-                </a>
-                <a id="pr" href="#"> Shopping Cart Total Price: ₹ <?php totalPrice(); ?>, Total Items
-                    <?php item(); ?></a>
-            </div>
+
+    <div class="header-1">
+
+        <!-- <a href="index.php" class="logo" > <img src="website/all/logo5.svg" alt="Logo image" class="hidden-xs">  </a> -->
+
+        <div class="col-md-8 offer">
+            <marquee behavior="" direction="">
+                <h1>SELAMAT DATANG DI PT DUDU DIGITAL INDONESIA</h1>
+            </marquee>
         </div>
 
+    </div>
+    <!-- Header section starts -->
+    <header>
         <div class="header-2">
-            <nav class="navbar">
-                <ul>
-                    <li><a href="index.php">HOME</a></li>
-                    <li><a class="active" href="trimer.php">SHOP</a></li>
-                    <li><a href="contactus.php">CONTACT</a></li>
-                </ul>
+            <nav class="navbar navbar-expand-lg navbar-light " style="background: #0ca6ed;">
+                <div class="container-fluid">
+                    <!-- Company Logo on the left -->
+                    <a class="navbar-brand me-3" href="index.php">
+                        <img src="website/all/pensilajaib.png" alt="Company Logo" width="70" height="70" class="d-inline-block align-text-top">
+                    </a>
 
-                <div class="col-md-6">
-                    <ul class="menu">
-                        <li>
-                            <div class="collapse clearfix" id="search">
-                                <form class="navbar-form" method="get" action="result.php">
-                                    <div class="input-group">
-                                        <input type="text" name="user_query" placeholder="search" class="form-control"
-                                            required="">
-                                        <button type="submit" value="search" name="search" class="btn btn-primary">
-                                            <i class="fa fa-search"></i>
-                                        </button>
-                                    </div>
-                                </form>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="cart.php" class="">
-                                <i class="fa fa-shopping-cart"></i>
-                                <span><?php item(); ?> items in cart</span>
-                            </a>
-                        </li>
-                        <li><a href="customer_registration.php"><i class="fa fa-user-plus"></i>Register</a></li>
-                        <li><a href="customer/my_account.php"><i class="fa fa-user-circle"></i>My Account</a></li>
-                        <li><a href="cart.php"><i class="fa fa-shopping-cart"></i>Goto Cart</a></li>
-                        <li>
-                            <?php
-                        if (!isset($_SESSION['customer_email'])) {
-                            echo "<a href='checkout.php'>Login</a>";
-                        } else {
-                            echo "<a href='logout.php'>Logout</a>";
-                        }
-                        ?>
-                        </li>
-                    </ul>
+                    <!-- Toggle button for mobile view -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <!-- Collapsible content -->
+                    <div class="collapse navbar-collapse" id="navbarContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="font-size: 15px;">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="index.php">Beranda</a>
+                            </li>
+                            <!-- <li class="nav-item">
+                                <a class="nav-link" href="#footer">Tentang Kita</a>
+                            </li> -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="trimer.php">Orderan</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contactus.php">Kontak</a>
+                            </li>
+                        </ul>
+                        <!-- Right-aligned items -->
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0" style="font-size: 15px;">
+                            <li class="nav-item">
+                                <a class="nav-link" href="cart.php">
+                                    <i class="fa fa-shopping-cart"></i>
+                                    <span><?php item(); ?> items in cart</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="customer_registration.php">
+                                    <i class="fa fa-user-plus"></i> Register
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <?php
+                                if (!isset($_SESSION['customer_email'])) {
+                                    echo "<a class='nav-link' href='checkout.php'>My Account</a>";
+                                } else {
+                                    echo "<a class='nav-link' href='customer/my_account.php?my_order'>My Account</a>";
+                                }
+                                ?>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="cart.php">
+                                    <i class="fa fa-shopping-cart"></i> Goto Cart
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <?php
+                                if (!isset($_SESSION['customer_email'])) {
+                                    echo "<a class='nav-link' href='checkout.php'>Login</a>";
+                                } else {
+                                    echo "<a class='nav-link' href='logout.php'>Logout</a>";
+                                }
+                                ?>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </nav>
         </div>
@@ -133,96 +157,53 @@ if (isset($_GET['pro_id'])) {
         <div class="container">
             <div class="col-md-12">
                 <ul class="breadcrumb">
-                    <li><span>Product Details</span></li>
+                    <li><span style="color:black">Product Details</span></li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <div class="content1" id="content1">
-        <div class="container1">
-            <div class="col-md-3">
-                <?php include("includes/sidebar.php"); ?>
-            </div>
-        </div>
-    </div>
 
-    <div class="slides">
-        <div class="mySlides fade">
-            <div class="numbertt"></div>
-            <img src="admin_area/product_images/<?php echo $p_img1 ?>" width="400" height="300">
-        </div>
 
-        <div class="mySlides fade">
-            <div class="numbertt"></div>
-            <img src="admin_area/product_images/<?php echo $p_img2 ?>" width="400" height="300">
-        </div>
 
-        <div class="mySlides fade">
-            <div class="numbertt"></div>
-            <img src="admin_area/product_images/<?php echo $p_img3 ?>" width="400" height="300">
-        </div>
-        <a class="prv" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="net" onclick="plusSlides(1)">&#10095;</a>
-    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script>
-    var slideIndex = 1;
-    showSlides(slideIndex);
 
-    function plusSlides(n) {
-        showSlides(slideIndex += n);
-    }
 
-    function currentSlide(n) {
-        showSlides(slideIndex = n);
-    }
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <h1 class="product-title">Judul: <?php echo $p_title; ?></h1>
 
-    function showSlides(n) {
-        var i;
-        var slides = document.getElementsByClassName("mySlides");
-        var dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {
-            slideIndex = 1
-        }
-        if (n < 1) {
-            slideIndex = slides.length
-        }
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].className += " active";
-    }
-    </script>
+                    <?php addCart(); // Function to handle cart addition 
+                    ?>
 
-    <div class="product-container">
-        <div class="product-info">
-            <h1 class="product-title"> Judul : <?php echo $p_title; ?></h1>
-            <?php addCart(); ?>
+                    <div class="" id="details">
+                        <p class="description text-dark"><?php echo $p_desc; ?></p>
+                        <p class="price">Price: INR <?php echo $p_price; ?></p>
 
-            <div class="detail-desc" id="details">
-                <h4>Product Details</h4>
-                <p class="description"><?php echo $p_desc; ?></p>
+                    </div>
+                </div>
             </div>
 
-            <form action="details.php?add_cart=<?php echo $pro_id; ?>" method="post" class="order-form">
-                <p class="order-button">
-                    <button class="btn-prim" type="submit">
-                        <i class="fa fa-shopping-cart"></i> Ambil Orderan
-                    </button>
-                </p>
-            </form>
+            <div class="col-md-6">
+                <form action="details.php?add_cart=<?php echo $pro_id; ?>" method="post" class="order-form">
+                    <p class="order-button">
+                        <button class="btn btn-primary" type="submit">
+                            <i class="fa fa-shopping-cart"></i> Ambil Order
+                        </button>
+                    </p>
+                </form>
+            </div>
         </div>
     </div>
 
+
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>s
 
 </html>
