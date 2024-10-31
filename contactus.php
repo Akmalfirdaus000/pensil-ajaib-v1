@@ -68,8 +68,8 @@ include("functions/functions.php");
 <body>
 
     <?php
-  include("includes/wa.php");
-  ?>
+    include("includes/wa.php");
+    ?>
     <!-- header section starts  -->
 
     <div class="header-1">
@@ -132,12 +132,12 @@ include("functions/functions.php");
                             </li>
                             <li class="nav-item">
                                 <?php
-                if (!isset($_SESSION['customer_email'])) {
-                  echo "<a class='nav-link' href='checkout.php'>My Account</a>";
-                } else {
-                  echo "<a class='nav-link' href='customer/my_account.php?my_order'>My Account</a>";
-                }
-                ?>
+                                if (!isset($_SESSION['customer_email'])) {
+                                    echo "<a class='nav-link' href='checkout.php'>My Account</a>";
+                                } else {
+                                    echo "<a class='nav-link' href='customer/my_account.php?my_order'>My Account</a>";
+                                }
+                                ?>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="cart.php">
@@ -146,12 +146,12 @@ include("functions/functions.php");
                             </li>
                             <li class="nav-item">
                                 <?php
-                if (!isset($_SESSION['customer_email'])) {
-                  echo "<a class='nav-link' href='checkout.php'>Login</a>";
-                } else {
-                  echo "<a class='nav-link' href='logout.php'>Logout</a>";
-                }
-                ?>
+                                if (!isset($_SESSION['customer_email'])) {
+                                    echo "<a class='nav-link' href='checkout.php'>Login</a>";
+                                } else {
+                                    echo "<a class='nav-link' href='logout.php'>Logout</a>";
+                                }
+                                ?>
                             </li>
                         </ul>
                     </div>
@@ -179,7 +179,7 @@ include("functions/functions.php");
     <div class="container mt-5 me-5">
         <div class="row">
             <!-- Kolom Kiri: Embed Google Maps -->
-            <div class="col-md-8">
+            <div class="col-md-5">
                 <div style="box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); border-radius: 8px; overflow: hidden;">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15957.191461495946!2d100.3719353!3d-0.9254594!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2fd4b911b9f4f3e5%3A0xe347c20e73eeae5f!2sHem&#39;s%20Institute!5e0!3m2!1sid!2sid!4v1729843495349!5m2!1sid!2sid"
@@ -189,35 +189,99 @@ include("functions/functions.php");
             </div>
 
             <!-- Kolom Kanan: Ikon Media Sosial -->
-            <div class="col-md-4 d-flex flex-column align-items-start justify-content-center ">
+            <div class="col-md-7 d-flex flex-column align-items-start justify-content-center">
                 <div>
                     <h4 style="color: #007bff; margin-bottom: 16px;">Hubungi Kami</h4>
 
-                    <!-- Link ke Facebook -->
-                    <p style="font-size: 1.1rem; margin: 8px 0;">
-                        <a href="https://www.facebook.com/profile.php?id=100093616384522" target="_blank"
-                            style="text-decoration: none; color: inherit;">
-                            <i class="fab fa-facebook-square fa-lg" style="color: #007bff; margin-right: 8px;"></i>
-                            Facebook
-                        </a>
-                    </p>
+                    <div class="row">
+                        <!-- Card 1 -->
+                        <div class="col-md-4 mb-3">
+                            <a href="https://wa.me/6281374660847" target="_blank" style="text-decoration: none;">
+                                <div class="card shadow-sm"
+                                    style="background-color: #007bff; color: white; border: none;">
+                                    <div class="card-body">
+                                        <h5 class="card-title" style="font-weight: bold;">Kode: D1</h5>
+                                        <p class="card-text">Nama Admin: Admin Dudu Utama (kantor)</p>
+                                        <p class="card-text">Nomor Admin: 081374660847</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
 
-                    <!-- Link ke Email -->
-                    <p style="font-size: 1.1rem; margin: 8px 0;">
-                        <a href="mailto:youremail@example.com" style="text-decoration: none; color: inherit;">
-                            <i class="fas fa-envelope fa-lg" style="color: #007bff; margin-right: 8px;"></i> Email
-                        </a>
-                    </p>
+                        <!-- Card 2 -->
+                        <div class="col-md-4 mb-3">
+                            <a href="https://wa.me/6285364211752" target="_blank" style="text-decoration: none;">
+                                <div class="card shadow-sm"
+                                    style="background-color: #007bff; color: white; border: none;">
+                                    <div class="card-body">
+                                        <h5 class="card-title" style="font-weight: bold;">Kode: Y1</h5>
+                                        <p class="card-text">Nama Admin: Admin Yolla</p>
+                                        <p class="card-text">Nomor Admin: 085364211752</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
 
-                    <!-- Link ke Instagram -->
-                    <p style="font-size: 1.1rem; margin: 8px 0;">
-                        <a href="https://www.instagram.com/pensilajaib.std/" target="_blank"
-                            style="text-decoration: none; color: inherit;">
-                            <i class="fab fa-instagram fa-lg" style="color: #007bff; margin-right: 8px;"></i> Instagram
-                        </a>
-                    </p>
+                        <!-- Card 3 -->
+                        <div class="col-md-4 mb-3">
+                            <a href="#" target="_blank" style="text-decoration: none;">
+                                <div class="card shadow-sm"
+                                    style="background-color: #007bff; color: white; border: none;">
+                                    <div class="card-body">
+                                        <h5 class="card-title" style="font-weight: bold;">Kode: N1</h5>
+                                        <p class="card-text">Nama Admin: Admin Nadya</p>
+                                        <p class="card-text">Nomor Admin: -</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="col-md-4 mb-3">
+                            <a href="https://wa.me/6282285959012" target="_blank" style="text-decoration: none;">
+                                <div class="card shadow-sm"
+                                    style="background-color: #007bff; color: white; border: none;">
+                                    <div class="card-body">
+                                        <h5 class="card-title" style="font-weight: bold;">Kode: DF1</h5>
+                                        <p class="card-text">Nama Admin: Admin Difa</p>
+                                        <p class="card-text">Nomor Admin: 082285959012</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Card 5 -->
+                        <div class="col-md-4 mb-3">
+                            <a href="https://wa.me/6282389135817" target="_blank" style="text-decoration: none;">
+                                <div class="card shadow-sm"
+                                    style="background-color: #007bff; color: white; border: none;">
+                                    <div class="card-body">
+                                        <h5 class="card-title" style="font-weight: bold;">Kode: M1</h5>
+                                        <p class="card-text">Nama Admin: Admin Melvi</p>
+                                        <p class="card-text">Nomor Admin: 082389135817</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Card 6 -->
+                        <div class="col-md-4 mb-3">
+                            <a href="https://wa.me/6285274799098" target="_blank" style="text-decoration: none;">
+                                <div class="card shadow-sm"
+                                    style="background-color: #007bff; color: white; border: none;">
+                                    <div class="card-body">
+                                        <h5 class="card-title" style="font-weight: bold;">Kode: K1</h5>
+                                        <p class="card-text">Nama Admin: Admin Keke</p>
+                                        <p class="card-text">Nomor Admin: 085274799098</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
                 </div>
             </div>
+
 
         </div>
     </div>
@@ -226,8 +290,8 @@ include("functions/functions.php");
 
     <!-- footer section starts  -->
     <?php
-  include("includes/footer.php");
-  ?>
+    include("includes/footer.php");
+    ?>
     <!-- footer section   -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -238,19 +302,19 @@ include("functions/functions.php");
 
 <?php
 if (isset($_POST['submit'])) {
-  $senderName = $_POST['name'];
-  $senderEmail = $_POST['email'];
-  $senderSubject = $_POST['subject'];
+    $senderName = $_POST['name'];
+    $senderEmail = $_POST['email'];
+    $senderSubject = $_POST['subject'];
 
-  $receiverEmail = "rakeshalakh@gmail.com";
-  mail($receiverEmail, $senderName, $senderSubject, $senderMassage, $senderEmail);
-  //customer mail
-  $email = $_POST['email'];
-  $subject = "Welcome to our website";
-  $msg = "I shall get you soon , thanks for sending email";
-  $from = "rakeshalakh@gmail.com";
-  mail($email, $subject, $msg, $from);
-  echo "<h2 align='center'>Your mail sent</h2>";
+    $receiverEmail = "rakeshalakh@gmail.com";
+    mail($receiverEmail, $senderName, $senderSubject, $senderMassage, $senderEmail);
+    //customer mail
+    $email = $_POST['email'];
+    $subject = "Welcome to our website";
+    $msg = "I shall get you soon , thanks for sending email";
+    $from = "rakeshalakh@gmail.com";
+    mail($email, $subject, $msg, $from);
+    echo "<h2 align='center'>Your mail sent</h2>";
 }
 ?>
 >>>>>>> 49c9a174dbf57eb62b69ca30e32ac2435e2777fe

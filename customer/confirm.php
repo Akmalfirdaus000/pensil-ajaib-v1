@@ -2,26 +2,26 @@
 session_start();
 if (!isset($_SESSION['customer_email'])) {
   echo "<script>window.open('../checkout.php','_self')</script>";
-}else{
-include("../includes/db.php");
+} else {
+  include("../includes/db.php");
 
-include("../functions/functions.php");
+  include("../functions/functions.php");
 
-if (isset($_GET['order_id'])) {
-  $order_id=$_GET['order_id'];
- 
-}
- ?>
+  if (isset($_GET['order_id'])) {
+    $order_id = $_GET['order_id'];
+  }
+?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pensil Ajaib</title>
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- owl carousel css file cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
@@ -31,210 +31,212 @@ if (isset($_GET['order_id'])) {
 
     <!-- custom css file link  -->
     <link rel="stylesheet" href="../style.css">
-  <style>
+    <style>
 
 
-  </style>
- 
+    </style>
+
 </head>
+
 <body>
 
-<!-- header section starts  -->
+    <!-- header section starts  -->
 
-<header>
+    <header>
 
-<div class="header-1">
+        <div class="header-1">
 
-    <!-- <a href="../index.php" class="logo" > <img src="../website/all/logo5.svg" alt="Logo image" class="hidden-xs">  </a> -->
-                               
-<div class="col-md-6 offer">
-    <a href="#" class="btn btn-sucess btn-sm">
-           <?php
+            <!-- <a href="../index.php" class="logo" > <img src="../website/all/logo5.svg" alt="Logo image" class="hidden-xs">  </a> -->
 
-        if (!isset($_SESSION['customer_email'])){
-        echo "Welcome Guest";
-      }else{
-      echo "Welcome: " .$_SESSION['customer_email'] . "";
-    }
+            <div class="col-md-6 offer">
+                <a href="#" class="btn btn-sucess btn-sm">
+                    <?php
 
-
-        ?>
-    </a>
-<a id="pr" href="#"> Shopping Cart Total Price: INR <?php totalPrice(); ?>, Total Items <?php item(); ?></a>
-</div>
-  
-</div>
-
-<div class="header-2">
-   
-
-<nav class="navbar"> 
+            if (!isset($_SESSION['customer_email'])) {
+              echo "Welcome Guest";
+            } else {
+              echo "Welcome: " . $_SESSION['customer_email'] . "";
+            }
 
 
-     <ul >
-      
-            <li><a  href="../index.php">Awal</a></li>
-            <li><a  href="../trimer.php">Orderan</a></li>
-          
-            <li><a href="../contactus.php">Kontak</a></li>
-          
- 
-       <div class="col-md-6">
-        <ul class="menu">
-            <li>
-                         <div class="collapse clearfix" id="search">
-                             <form class="navbar-form" method="get" action="result.php">
-                                 <div class="input-group">
-                                     <input type="text" name="user_query" placeholder="search" class="form-control" required="">
-                                     <button type="submit" value="search" name="search" class="btn btn-primary">
-                                         <i class="fa fa-search"></i>
-                                     </button>
-                                 </div>
-                             </form>
-                         </div>
-                   </li>
+            ?>
+                </a>
+                <a id="pr" href="#"> Shopping Cart Total Price: INR <?php totalPrice(); ?>, Total Items
+                    <?php item(); ?></a>
+            </div>
+
+        </div>
+
+        <div class="header-2">
+
+
+            <nav class="navbar">
+
+
+                <ul>
+
+                    <li><a href="../index.php">Awal</a></li>
+                    <li><a href="../trimer.php">Orderan</a></li>
+
+                    <li><a href="../contactus.php">Kontak</a></li>
+
+
+                    <div class="col-md-6">
+                        <ul class="menu">
+                            <li>
+                                <div class="collapse clearfix" id="search">
+                                    <form class="navbar-form" method="get" action="result.php">
+                                        <div class="input-group">
+                                            <input type="text" name="user_query" placeholder="search"
+                                                class="form-control" required="">
+                                            <button type="submit" value="search" name="search" class="btn btn-primary">
+                                                <i class="fa fa-search"></i>
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </li>
 
 
 
-                <li>
-                  <a href="../cart.php" class="">
-                    <i class="fa fa-shopping-cart"></i>
-                      <span><?php item(); ?> items in cart</span>
-                        </a>
-                </li>
-                   
+                            <li>
+                                <a href="../cart.php" class="">
+                                    <i class="fa fa-shopping-cart"></i>
+                                    <span><?php item(); ?> items in cart</span>
+                                </a>
+                            </li>
 
-                   <!-- <li>
+
+                            <!-- <li>
                    <a  href="../customer_registration.php"><i class="fa fa-user-plus"></i>Register</a></li> -->
-                   <li>
-                   <?php
+                            <li>
+                                <?php
 
-                    if (!isset($_SESSION['customer_email'])){
+                  if (!isset($_SESSION['customer_email'])) {
                     echo "<a href='checkout.php'>My Account</a>";
+                  } else {
 
-                         } else{
-                    
                     echo "<a href='customer/my_account.php?my_order'>My Account</a>";
-                
-                         }
+                  }
 
-                    ?></li> 
-                     
-                   <li>
-                   <a href="../cart.php"><i class="fa fa-shopping-cart"></i>Goto Cart</a></li>
-                    
-                   <li>
-                     <?php
+                  ?></li>
 
-                    if (!isset($_SESSION['customer_email'])){
+                            <li>
+                                <a href="../cart.php"><i class="fa fa-shopping-cart"></i>Goto Cart</a>
+                            </li>
+
+                            <li>
+                                <?php
+
+                  if (!isset($_SESSION['customer_email'])) {
                     echo "<a href='checkout.php'>Login</a>";
+                  } else {
 
-                         } else{
-                    
                     echo "<a href='logout.php'>Logout</a>";
-                
-                         }
+                  }
 
-                    ?></li>
-             </ul>
-       </div>
-</ul>
-
+                  ?></li>
+                        </ul>
+                    </div>
+                </ul>
 
 
-</nav></div></header>
 
-<!-- header section End  -->
+            </nav>
+        </div>
+    </header>
 
-<section class="content" id="content">
-  <div class="container">
-    <div class="col-md-12">
-      <ul class="breadcrumb">
-     
-        <li><span>My Account</span></li>
-        
+    <!-- header section End  -->
 
-      </ul>
+    <section class="content" id="content">
+        <div class="container">
+            <div class="col-md-12">
+                <ul class="breadcrumb">
 
+                    <li><span>My Account</span></li>
+
+
+                </ul>
+
+            </div>
+        </div>
+    </section>
+    <div class="co-9">
+        <div class="trx">
+            <h1 text-align="center">Silahkan Confirmasi Orderan Jika Sudah Selesai</h1>
+            <form action="confirm.php?update_id=<?php echo $order_id; ?>" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label> Jumlah Di kerjakan</label>
+                    <input type="text" class="form-control" name="invoice_number" required="">
+                </div>
+                <div class="form-group">
+                    <label> Isi </label>
+                    <input type="text" class="form-control" name="amount" required="">
+                </div>
+                <div class="form-group">
+                    <label>Bukti </label>
+                    <select class="form-control" name="payment_mode">
+                        <option>Kirim Wa</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label> isi </label>
+                    <input type="text" class="form-control" name="trfr_number" required="">
+                </div>
+                <div class="form-group">
+                    <label>Waktu Penyelesaian </label>
+                    <input type="date" class="form-control" name="date" required="">
+                </div>
+                <div class="text-center">
+                    <button type="submit" name="confirm_payment" class="btn btn-primary btn-lg">Konfirmasi</button>
+                </div>
+            </form>
+
+            <?php
+        if (isset($_POST['confirm_payment'])) {
+            $update_id = $_GET['update_id'];
+            $invoice_number = $_POST['invoice_number'];
+            $amount = $_POST['amount'];
+            $payment_mode = $_POST['payment_mode'];
+            $trfr_number = $_POST['trfr_number'];
+            $date = $_POST['date'];
+            $complete = "Complete";
+
+            // Simpan data pembayaran
+            $insert = "INSERT INTO payments (invoice_id, amount, payment_mode, ref_no, payment_date) 
+                       VALUES ('$invoice_number', '$amount', '$payment_mode', '$trfr_number', '$date')";
+            mysqli_query($con, $insert);
+
+            // Perbarui status pesanan
+            $update_q = "UPDATE customer_order SET order_status='$complete' WHERE order_id='$update_id'";
+            mysqli_query($con, $update_q);
+
+            echo "<script>alert('Your order has been received');</script>";
+            echo "<script>window.open('my_account.php?order', '_self');</script>";
+        }
+        ?>
+        </div>
     </div>
-</div></section> 
- <div class="co-9">
-  <div class="trx">
-    <h1 text-align="center">Silahkan Confirmasi Orderan Jika Sudah Selesai</h1>
-    <form action="confirm.php?update_id=<?php echo $order_id ?>" method="post" enctype="multipart/form-data">
-      <div class="form-group">
-        <label> Jumlah Di kerjakan</label>
-        <input type="text" class="form-control" name="invoice_number" required="">
-      </div>
-      <div class="form-group">
-        <label> Isi </label>
-        <input type="text" class="form-control" name="amount" required="">
-      </div>
-      <div class="form-group">
-        <label>Bukti </label>
-       <select class="form-control" name="payment_mode">
-         <option>Kirim Wa</option>
-        
-       </select>
-      </div>
-      <div class="form-group">
-        <label> isi </label>
-        <input type="text" class="form-control" name="trfr_number" required="">
-      </div>
-      <div class="form-group">
-        <label>Waktu Penyelesaian </label>
-        <input type="date" class="form-control" name="date" required="">
-      </div>
-      <div class="text-center">
-        <button type="submit" name="confirm_payment" class="btn btn-primary btn-lg">Konfirmasi</button>
-      </div>
-    </form>
 
+
+
+
+    <div class="content1" id="content1">
+        <div class="container1">
+            <div class="col-md-3">
+                <?php
+          include("includes/sidebar.php");
+          ?>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- footer section starts  -->
     <?php
-
-       if (isset($_POST['confirm_payment'])) {
-           $update_id=$_GET['update_id'];
-           $invoice_number=$_POST['invoice_number'];
-           $amount=$_POST['amount'];
-           $payment_mode=$_POST['payment_mode'];
-           $trfr_number=$_POST['trfr_number'];
-           $date=$_POST['date'];
-           $complete="Complete";
-           $insert="insert into payments (invoice_id,amount,payment_mode, ref_no, payment_date) values ('$invoice_number','$amount','$payment_mode','$trfr_number','$date')";
-           $run_insert=mysqli_query($con,$insert);
-
-           $update_q="update customer_order set order_status ='$complete' where order_id='$update_id'";
-           $run_insert=mysqli_query($con,$update_q);
-
-          // $update_p="update pending_order set order_status ='$complete' where order_id='$update_id'";
-          // $run_insert=mysqli_query($con,$update_p);
-
-           echo "<script> alert('Your order has been received') </script>";
-            echo "<script>window.open('my_account.php?order','_self') </script>";
-       }
-
-     ?>
-
-  </div>
- </div>
-    
-  
-  <div class="content1" id="content1">
-  <div class="container1">
-    <div class="col-md-3">
-      <?php
-      include("includes/sidebar.php");  
-      ?>
-   
-    </div>
-
-</div>
-     </div> 
-       <!-- footer section starts  -->
-   <?php
-      include("includes/footer.php");  
-      ?>
-<!-- footer section   -->
+    include("includes/footer.php");
+    ?>
+    <!-- footer section   -->
 
 
-<?php } ?>
+    <?php } ?>

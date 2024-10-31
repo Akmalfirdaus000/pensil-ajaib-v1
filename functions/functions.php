@@ -171,14 +171,15 @@ function getCat()
 	$get_cat = "SELECT * FROM categories";
 	$run_cat = mysqli_query($db, $get_cat);
 
-	echo "<ol>"; // Mulai elemen list terurut
+	echo "<ol>";
 	while ($row_cat = mysqli_fetch_array($run_cat)) {
 		$cat_id = $row_cat['cat_id'];
 		$cat_title = $row_cat['cat_title'];
 		echo "<li><a href='trimer.php?cat_id=$cat_id' style='text-decoration: none;'>$cat_title</a></li>";
 	}
-	echo "</ol>"; // Akhiri elemen list terurut
+	echo "</ol>";
 }
+
 
 
 
