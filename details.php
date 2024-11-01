@@ -172,77 +172,57 @@ if (isset($_GET['pro_id'])) {
 
 
 
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script>
-    var slideIndex = 1;
-    showSlides(slideIndex);
-
-    function plusSlides(n) {
-        showSlides(slideIndex += n);
-    }
-
-    function currentSlide(n) {
-        showSlides(slideIndex = n);
-    }
-
-    function showSlides(n) {
-        var i;
-        var slides = document.getElementsByClassName("mySlides");
-        var dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {
-            slideIndex = 1
-        }
-        if (n < 1) {
-            slideIndex = slides.length
-        }
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].className += " active";
-    }
-    </script>
-
-
-    <div class="container mt-4">
+    <div class="container mb-5   d-flex justify-content-center" style="margin-right: 60px;">
+        <!-- Added 'd-flex justify-content-center' -->
         <div class="card shadow-lg">
             <div class="row no-gutters">
                 <div class="col-md-6 position-relative">
-                    <div class="slides slider-margin">
-                        <div class="mySlides fade">
-                            <img src="admin_area/product_images/<?php echo $p_img1 ?>" class="img-fluid"
-                                alt="Product Image 1" style="width: 250px; height: auto;">
+                    <div id="carouselExampleIndicators" class="carousel slide slider-margin" data-bs-ride="carousel">
+                        <!-- Indicators -->
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
                         </div>
-                        <div class="mySlides fade">
-                            <img src="admin_area/product_images/<?php echo $p_img2 ?>" class="img-fluid"
-                                alt="Product Image 2" style="width: 250px; height: auto;">
+
+                        <!-- Carousel Items -->
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="admin_area/product_images/<?php echo $p_img1 ?>" class="d-block img-fluid"
+                                    alt="Product Image 1" style="width: 750px; height: 250px; object-fit: cover;">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="admin_area/product_images/<?php echo $p_img2 ?>" class="d-block img-fluid"
+                                    alt="Product Image 2" style="width: 750px; height: 250px; object-fit: cover;">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="admin_area/product_images/<?php echo $p_img3 ?>" class="d-block img-fluid"
+                                    alt="Product Image 3" style="width: 750px; height: 250px; object-fit: cover;">
+                            </div>
                         </div>
-                        <div class="mySlides fade">
-                            <img src="admin_area/product_images/<?php echo $p_img3 ?>" class="img-fluid"
-                                alt="Product Image 3" style="width: 250px; height: auto;">
-                        </div>
-                        <!-- Navigation Arrows -->
-                        <a class="prv" onclick="plusSlides(-1)">&#10094;</a>
-                        <a class="net" onclick="plusSlides(1)">&#10095;</a>
-                    </div>
-                    <div class="text-center mt-2">
-                        <span class="dot" onclick="currentSlide(1)"></span>
-                        <span class="dot" onclick="currentSlide(2)"></span>
-                        <span class="dot" onclick="currentSlide(3)"></span>
+
+                        <!-- Navigation Controls -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
                     </div>
                 </div>
 
-
-                <div class="col-md-6">
+                <div class="col-md-6 d-flex align-items-center justify-content-center">
+                    <!-- Added 'd-flex align-items-center justify-content-center' -->
                     <div class="card shadow-sm border-0">
-                        <div class="card-body">
+                        <div class="card-body text-center">
+                            <!-- Added 'text-center' class -->
                             <h1 class="product-title text-primary mb-3 fw-bold"><?php echo $p_title; ?></h1>
 
                             <?php addCart(); // Function to handle cart addition 
@@ -319,5 +299,9 @@ if (isset($_GET['pro_id'])) {
     </footer>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script src="js/main.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 </html>
