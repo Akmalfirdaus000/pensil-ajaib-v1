@@ -1,11 +1,11 @@
 <?php
 session_start();
 if (!isset($_SESSION['customer_email'])) {
-  echo "<script>window.open('../checkout.php','_self')</script>";
+    echo "<script>window.open('../checkout.php','_self')</script>";
 } else {
 
-  include("../includes/db.php");
-  include("../functions/functions.php");
+    include("../includes/db.php");
+    include("../functions/functions.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -41,8 +41,8 @@ if (!isset($_SESSION['customer_email'])) {
     <!-- header section starts  -->
 
     <?php
-    include(".././includes/wa.php");
-    ?>
+        include(".././includes/wa.php");
+        ?>
     <!-- header section starts  -->
     <div class="header-1">
 
@@ -104,22 +104,22 @@ if (!isset($_SESSION['customer_email'])) {
                             </li>
                             <li class="nav-item">
                                 <?php
-                  if (!isset($_SESSION['customer_email'])) {
-                    echo "<a class='nav-link' href='../checkout.php'>My Account</a>";
-                  } else {
-                    echo "<a class='nav-link' href='customer/my_account.php?my_order'>My Account</a>";
-                  }
-                  ?>
+                                    if (!isset($_SESSION['customer_email'])) {
+                                        echo "<a class='nav-link' href='../checkout.php'>My Account</a>";
+                                    } else {
+                                        echo "<a class='nav-link' href='customer/my_account.php?my_order'>My Account</a>";
+                                    }
+                                    ?>
                             </li>
 
                             <li class="nav-item">
                                 <?php
-                  if (!isset($_SESSION['customer_email'])) {
-                    echo "<a class='nav-link' href='../checkout.php'>Login</a>";
-                  } else {
-                    echo "<a class='nav-link' href='../logout.php'>Logout</a>";
-                  }
-                  ?>
+                                    if (!isset($_SESSION['customer_email'])) {
+                                        echo "<a class='nav-link' href='../checkout.php'>Login</a>";
+                                    } else {
+                                        echo "<a class='nav-link' href='../logout.php'>Logout</a>";
+                                    }
+                                    ?>
                             </li>
                         </ul>
                     </div>
@@ -145,46 +145,46 @@ if (!isset($_SESSION['customer_email'])) {
 
 
             <?php
-        if (isset($_GET['my_order'])) {
-          include("my_order.php");
-        }
-        ?>
+                if (isset($_GET['my_order'])) {
+                    include("my_order.php");
+                }
+                ?>
 
             <!-- including my_order.php End  -->
 
             <!-- including payoffline.php page starts  -->
-            <?php
+            <!-- <?php
 
-        if (isset($_GET['pay_offline'])) {
-          include("pay_offline.php");
-        }
+                        if (isset($_GET['pay_offline'])) {
+                            include("pay_offline.php");
+                        }
 
-        ?>
+                        ?> -->
 
             <!-- including payoffline.php page End  -->
             <!-- including Edit_account.php page start  -->
             <?php
-        if (isset($_GET['edit_act'])) {
-          include("edit_act.php");
-        }
-        ?>
+                if (isset($_GET['edit_act'])) {
+                    include("edit_act.php");
+                }
+                ?>
 
             <!-- including Edit_account.php page End  -->
             <!-- including change_pass.php page Start  -->
             <?php
-        if (isset($_GET['change_pass'])) {
-          include("change_password.php");
-        }
-        ?>
+                if (isset($_GET['change_pass'])) {
+                    include("change_password.php");
+                }
+                ?>
 
             <!-- including change_pass.php page End  -->
             <!-- including delete_pass.php page Start  -->
 
-            <?php
-        if (isset($_GET['delete_ac'])) {
-          include("delete_ac.php");
-        }
-        ?>
+            <!-- <?php
+                        if (isset($_GET['delete_ac'])) {
+                            include("delete_ac.php");
+                        }
+                        ?> -->
 
             <!-- including delete_pass.php page End  -->
         </div>
@@ -193,10 +193,10 @@ if (!isset($_SESSION['customer_email'])) {
 
         <div class="content1" id="content1">
             <div class="container1">
-                <div class="col-md-3">
+                <div class="col-md-5">
                     <?php
-            include("includes/sidebar.php");
-            ?>
+                        include("includes/sidebar.php");
+                        ?>
 
                 </div>
 
@@ -206,8 +206,8 @@ if (!isset($_SESSION['customer_email'])) {
 
     <!-- footer section starts  -->
     <?php
-    include("../includes/footer.php");
-    ?>
+        include("../includes/footer.php");
+        ?>
     <!-- footer section   -->
 
     <?php } ?>

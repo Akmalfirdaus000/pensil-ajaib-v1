@@ -1862,9 +1862,9 @@ margin: auto;
 }
 .panel-bdy {
   
-  width:auto;
-  
-  background-color: #0ca6ed;
+  width:200px;
+  color:#000000
+ 
 }
 .panel-bdy .active{
  color: #0a4c6a;
@@ -1886,11 +1886,12 @@ margin: auto;
 }
 .panel-bdy ul li a{
   z-index: 0;
-  color: #fff;
+  color: #000000;
+  text-decoration: none;
 
 }
 .panel-bdy ul a:hover{
-  color: #6fda44;
+  color: #0ca6ed;
 
   }
  .col-m-9{

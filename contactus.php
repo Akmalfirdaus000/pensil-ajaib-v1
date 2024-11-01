@@ -176,7 +176,7 @@ include("functions/functions.php");
         </div>
     </section>
 
-    <div class="container mt-5 me-5">
+    <div class="container mt-5">
         <div class="row">
             <!-- Kolom Kiri: Embed Google Maps -->
             <div class="col-md-5">
