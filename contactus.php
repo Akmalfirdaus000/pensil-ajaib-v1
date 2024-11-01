@@ -30,37 +30,37 @@ include("functions/functions.php");
     <!-- Bootstrap 5.3 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-    .admin-container {
-        margin: auto;
-        margin-top: 20rem;
-        background-color: #ffffff;
-        padding: 20px;
-        border-radius: 12px;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-        max-width: 750px;
-        text-align: center;
-    }
+        .admin-container {
+            margin: auto;
+            margin-top: 20rem;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            max-width: 750px;
+            text-align: center;
+        }
 
-    /* Admin Card Styles */
-    .admin-card {
-        background: linear-gradient(90deg, #ff6a88, #ff99ac);
-        color: #ffffff;
-        padding: 10px;
-        margin: 10px 0;
-        border-radius: 8px;
-        font-size: 18px;
-        position: relative;
-    }
+        /* Admin Card Styles */
+        .admin-card {
+            background: linear-gradient(90deg, #ff6a88, #ff99ac);
+            color: #ffffff;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 8px;
+            font-size: 18px;
+            position: relative;
+        }
 
-    /* Icon Before Each Admin */
-    .admin-card::before {
-        content: "👤";
-        position: absolute;
-        left: -35px;
-        top: 50%;
-        transform: translateY(-50%);
-        font-size: 20px;
-    }
+        /* Icon Before Each Admin */
+        .admin-card::before {
+            content: "👤";
+            position: absolute;
+            left: -35px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 20px;
+        }
     </style>
 
 </head>
@@ -82,6 +82,16 @@ include("functions/functions.php");
                 <h1>SELAMAT DATANG DI PT DUDU DIGITAL INDONESIA</h1>
             </marquee>
         </div>
+        <h4> <?php
+
+                if (!isset($_SESSION['customer_email'])) {
+                    echo "";
+                } else {
+                    echo "Users: " . $_SESSION['customer_email'] . "";
+                }
+
+
+                ?></h4>
 
     </div>
     <header>
@@ -90,14 +100,11 @@ include("functions/functions.php");
                 <div class="container-fluid">
                     <!-- Company Logo on the left -->
                     <a class="navbar-brand me-3" href="index.php">
-                        <img src="website/all/pensilajaib.png" alt="Company Logo" width="70" height="70"
-                            class="d-inline-block align-text-top">
+                        <img src="website/all/pensilajaib.png" alt="Company Logo" width="70" height="70" class="d-inline-block align-text-top">
                     </a>
 
                     <!-- Toggle button for mobile view -->
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false"
-                        aria-label="Toggle navigation">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
 
@@ -125,11 +132,11 @@ include("functions/functions.php");
                                     <span><?php item(); ?> items in cart</span>
                                 </a>
                             </li>
-                            <li class="nav-item">
+                            <!-- <li class="nav-item">
                                 <a class="nav-link" href="customer_registration.php">
                                     <i class="fa fa-user-plus"></i> Register
                                 </a>
-                            </li>
+                            </li> -->
                             <li class="nav-item">
                                 <?php
                                 if (!isset($_SESSION['customer_email'])) {
@@ -139,11 +146,11 @@ include("functions/functions.php");
                                 }
                                 ?>
                             </li>
-                            <li class="nav-item">
+                            <!-- <li class="nav-item">
                                 <a class="nav-link" href="cart.php">
                                     <i class="fa fa-shopping-cart"></i> Goto Cart
                                 </a>
-                            </li>
+                            </li> -->
                             <li class="nav-item">
                                 <?php
                                 if (!isset($_SESSION['customer_email'])) {
@@ -181,10 +188,7 @@ include("functions/functions.php");
             <!-- Kolom Kiri: Embed Google Maps -->
             <div class="col-md-5">
                 <div style="box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); border-radius: 8px; overflow: hidden;">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15957.191461495946!2d100.3719353!3d-0.9254594!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2fd4b911b9f4f3e5%3A0xe347c20e73eeae5f!2sHem&#39;s%20Institute!5e0!3m2!1sid!2sid!4v1729843495349!5m2!1sid!2sid"
-                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15957.191461495946!2d100.3719353!3d-0.9254594!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2fd4b911b9f4f3e5%3A0xe347c20e73eeae5f!2sHem&#39;s%20Institute!5e0!3m2!1sid!2sid!4v1729843495349!5m2!1sid!2sid" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
 
@@ -197,8 +201,7 @@ include("functions/functions.php");
                         <!-- Card 1 -->
                         <div class="col-md-4 mb-3">
                             <a href="https://wa.me/6281374660847" target="_blank" style="text-decoration: none;">
-                                <div class="card shadow-sm"
-                                    style="background-color: #007bff; color: white; border: none;">
+                                <div class="card shadow-sm" style="background-color: #007bff; color: white; border: none;">
                                     <div class="card-body">
                                         <h5 class="card-title" style="font-weight: bold;">Kode: D1</h5>
                                         <p class="card-text">Nama Admin: Admin Dudu Utama (kantor)</p>
@@ -211,8 +214,7 @@ include("functions/functions.php");
                         <!-- Card 2 -->
                         <div class="col-md-4 mb-3">
                             <a href="https://wa.me/6285364211752" target="_blank" style="text-decoration: none;">
-                                <div class="card shadow-sm"
-                                    style="background-color: #007bff; color: white; border: none;">
+                                <div class="card shadow-sm" style="background-color: #007bff; color: white; border: none;">
                                     <div class="card-body">
                                         <h5 class="card-title" style="font-weight: bold;">Kode: Y1</h5>
                                         <p class="card-text">Nama Admin: Admin Yolla</p>
@@ -224,13 +226,12 @@ include("functions/functions.php");
 
                         <!-- Card 3 -->
                         <div class="col-md-4 mb-3">
-                            <a href="#" target="_blank" style="text-decoration: none;">
-                                <div class="card shadow-sm"
-                                    style="background-color: #007bff; color: white; border: none;">
+                            <a href="https://wa.me/6285364211746" target="_blank" style="text-decoration: none;">
+                                <div class="card shadow-sm" style="background-color: #007bff; color: white; border: none;">
                                     <div class="card-body">
                                         <h5 class="card-title" style="font-weight: bold;">Kode: N1</h5>
                                         <p class="card-text">Nama Admin: Admin Nadya</p>
-                                        <p class="card-text">Nomor Admin: -</p>
+                                        <p class="card-text">Nomor Admin: 085364211746</p>
                                     </div>
                                 </div>
                             </a>
@@ -239,8 +240,7 @@ include("functions/functions.php");
                         <!-- Card 4 -->
                         <div class="col-md-4 mb-3">
                             <a href="https://wa.me/6282285959012" target="_blank" style="text-decoration: none;">
-                                <div class="card shadow-sm"
-                                    style="background-color: #007bff; color: white; border: none;">
+                                <div class="card shadow-sm" style="background-color: #007bff; color: white; border: none;">
                                     <div class="card-body">
                                         <h5 class="card-title" style="font-weight: bold;">Kode: DF1</h5>
                                         <p class="card-text">Nama Admin: Admin Difa</p>
@@ -253,8 +253,7 @@ include("functions/functions.php");
                         <!-- Card 5 -->
                         <div class="col-md-4 mb-3">
                             <a href="https://wa.me/6282389135817" target="_blank" style="text-decoration: none;">
-                                <div class="card shadow-sm"
-                                    style="background-color: #007bff; color: white; border: none;">
+                                <div class="card shadow-sm" style="background-color: #007bff; color: white; border: none;">
                                     <div class="card-body">
                                         <h5 class="card-title" style="font-weight: bold;">Kode: M1</h5>
                                         <p class="card-text">Nama Admin: Admin Melvi</p>
@@ -267,8 +266,7 @@ include("functions/functions.php");
                         <!-- Card 6 -->
                         <div class="col-md-4 mb-3">
                             <a href="https://wa.me/6285274799098" target="_blank" style="text-decoration: none;">
-                                <div class="card shadow-sm"
-                                    style="background-color: #007bff; color: white; border: none;">
+                                <div class="card shadow-sm" style="background-color: #007bff; color: white; border: none;">
                                     <div class="card-body">
                                         <h5 class="card-title" style="font-weight: bold;">Kode: K1</h5>
                                         <p class="card-text">Nama Admin: Admin Keke</p>
@@ -317,4 +315,3 @@ if (isset($_POST['submit'])) {
     echo "<h2 align='center'>Your mail sent</h2>";
 }
 ?>
->>>>>>> 49c9a174dbf57eb62b69ca30e32ac2435e2777fe

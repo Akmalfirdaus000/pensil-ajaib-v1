@@ -23,7 +23,7 @@ include("functions/functions.php");
     <link rel="stylesheet" href="style.css">
 
     <style>
-        /* Custom styles can be added here */
+    /* Custom styles can be added here */
     </style>
 </head>
 
@@ -43,6 +43,16 @@ include("functions/functions.php");
                 <h1>SELAMAT DATANG DI PT DUDU DIGITAL INDONESIA</h1>
             </marquee>
         </div>
+        <h4> <?php
+
+if (!isset($_SESSION['customer_email'])) {
+    echo "";
+} else {
+    echo "Users: " . $_SESSION['customer_email'] . "";
+}
+
+
+?></h4>
 
     </div>
     <!-- navbar section starts -->
@@ -52,11 +62,14 @@ include("functions/functions.php");
                 <div class="container-fluid">
                     <!-- Company Logo on the left -->
                     <a class="navbar-brand me-3" href="index.php">
-                        <img src="website/all/pensilajaib.png" alt="Company Logo" width="70" height="70" class="d-inline-block align-text-top">
+                        <img src="website/all/pensilajaib.png" alt="Company Logo" width="70" height="70"
+                            class="d-inline-block align-text-top">
                     </a>
 
                     <!-- Toggle button for mobile view -->
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false"
+                        aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
 
@@ -84,11 +97,11 @@ include("functions/functions.php");
                                     <span><?php item(); ?> items in cart</span>
                                 </a>
                             </li>
-                            <li class="nav-item">
+                            <!-- <li class="nav-item">
                                 <a class="nav-link" href="customer_registration.php">
                                     <i class="fa fa-user-plus"></i> Register
                                 </a>
-                            </li>
+                            </li> -->
                             <li class="nav-item">
                                 <?php
                                 if (!isset($_SESSION['customer_email'])) {
@@ -98,11 +111,11 @@ include("functions/functions.php");
                                 }
                                 ?>
                             </li>
-                            <li class="nav-item">
+                            <!-- <li class="nav-item">
                                 <a class="nav-link" href="cart.php">
                                     <i class="fa fa-shopping-cart"></i> Goto Cart
                                 </a>
-                            </li>
+                            </li> -->
                             <li class="nav-item">
                                 <?php
                                 if (!isset($_SESSION['customer_email'])) {
@@ -120,7 +133,8 @@ include("functions/functions.php");
     </header>
     <section class="content" id="content" style=" padding: 40px 0;">
         <div class="container" style="max-width: 800px; margin: 0 auto;">
-            <h4 class="text-center" style="font-size: 28px; color: #343a40; margin-bottom: 20px; font-weight: bold; text-transform: uppercase;">
+            <h4 class="text-center"
+                style="font-size: 28px; color: #343a40; margin-bottom: 20px; font-weight: bold; text-transform: uppercase;">
                 keranjang
             </h4>
         </div>
@@ -163,12 +177,14 @@ include("functions/functions.php");
                                     $sub_total = $row['product_price'] * $pro_qty;
                                     $total += $sub_total;
                             ?>
-                                    <tr>
-                                        <td><img src="admin_area/product_images/<?php echo $p_img1 ?>" class="img-fluid" style="max-width: 80px;"></td>
-                                        <td><?php echo $p_title ?></td>
+                            <tr>
+                                <td><img src="admin_area/product_images/<?php echo $p_img1 ?>" class="img-fluid"
+                                        style="max-width: 80px;"></td>
+                                <td><?php echo $p_title ?></td>
 
-                                        <td><input type="checkbox" name="remove[]" value="<?php echo $pro_id ?>" class="form-check-input"></td>
-                                    </tr>
+                                <td><input type="checkbox" name="remove[]" value="<?php echo $pro_id ?>"
+                                        class="form-check-input"></td>
+                            </tr>
                             <?php
                                 }
                             }
@@ -213,6 +229,11 @@ include("functions/functions.php");
 
 
 
+    <!-- footer section starts  -->
+    <?php
+    include("includes/footer.php");
+    ?>
+    <!-- footer section   -->
 
 
     <!-- Footer Section -->

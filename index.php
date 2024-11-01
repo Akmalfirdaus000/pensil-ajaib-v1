@@ -27,7 +27,15 @@ include("functions/functions.php");
 
     <!-- custom css file link -->
     <link rel="stylesheet" href="style.css">
+    <style>
+        .hot {
+            font-size: 14px;
+        }
 
+        .hot .accordion-button {
+            font-size: 18px;
+        }
+    </style>
 
 </head>
 
@@ -45,7 +53,18 @@ include("functions/functions.php");
             <marquee behavior="" direction="">
                 <h1>SELAMAT DATANG DI PT DUDU DIGITAL INDONESIA</h1>
             </marquee>
+
         </div>
+        <h4> <?php
+
+                if (!isset($_SESSION['customer_email'])) {
+                    echo "";
+                } else {
+                    echo "Users: " . $_SESSION['customer_email'] . "";
+                }
+
+
+                ?></h4>
 
     </div>
     <!-- navbar section starts -->
@@ -55,14 +74,11 @@ include("functions/functions.php");
                 <div class="container-fluid">
                     <!-- Company Logo on the left -->
                     <a class="navbar-brand me-3" href="index.php">
-                        <img src="website/all/pensilajaib.png" alt="Company Logo" width="70" height="70"
-                            class="d-inline-block align-text-top">
+                        <img src="website/all/pensilajaib.png" alt="Company Logo" width="70" height="70" class="d-inline-block align-text-top">
                     </a>
 
                     <!-- Toggle button for mobile view -->
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false"
-                        aria-label="Toggle navigation">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
 
@@ -90,11 +106,11 @@ include("functions/functions.php");
                                     <span><?php item(); ?> items in cart</span>
                                 </a>
                             </li>
-                            <li class="nav-item">
+                            <!-- <li class="nav-item">
                                 <a class="nav-link" href="customer_registration.php">
                                     <i class="fa fa-user-plus"></i> Register
                                 </a>
-                            </li>
+                            </li> -->
                             <li class="nav-item">
                                 <?php
                                 if (!isset($_SESSION['customer_email'])) {
@@ -132,7 +148,7 @@ include("functions/functions.php");
             <span style="color: #000;">PENGUMUMAN</span>
         </h1>
 
-        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" style="font-size: 58px;">
             <!-- Carousel indicators -->
             <div class="carousel-indicators">
                 <?php
@@ -173,13 +189,11 @@ include("functions/functions.php");
             </div>
 
             <!-- Carousel controls -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
@@ -199,9 +213,7 @@ include("functions/functions.php");
                     <div class="accordion" id="accordionPanelsStayOpenExampleLeft">
                         <div class="accordion-item">
                             <h2 class="accordion-header">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseOperationalHours" aria-expanded="true"
-                                    aria-controls="collapseOperationalHours">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOperationalHours" aria-expanded="true" aria-controls="collapseOperationalHours">
                                     Jam Operasional Kerja
                                 </button>
                             </h2>
@@ -244,9 +256,7 @@ include("functions/functions.php");
 
                         <div class="accordion-item">
                             <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#panelsStayOpen-collapseDressCode" aria-expanded="false"
-                                    aria-controls="panelsStayOpen-collapseDressCode">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseDressCode" aria-expanded="false" aria-controls="panelsStayOpen-collapseDressCode">
                                     Atribut Berpakaian
                                 </button>
                             </h2>
@@ -273,9 +283,7 @@ include("functions/functions.php");
 
                         <div class="accordion-item">
                             <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#panelsStayOpen-collapseTwoLeft" aria-expanded="false"
-                                    aria-controls="panelsStayOpen-collapseTwoLeft">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwoLeft" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwoLeft">
                                     Proses & Jenjang Karier
                                 </button>
                             </h2>
@@ -304,9 +312,7 @@ include("functions/functions.php");
                     <div class="accordion" id="accordionPanelsStayOpenExampleRight">
                         <div class="accordion-item">
                             <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#panelsStayOpen-collapseRules" aria-expanded="false"
-                                    aria-controls="panelsStayOpen-collapseRules">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseRules" aria-expanded="false" aria-controls="panelsStayOpen-collapseRules">
                                     Aturan Selama Jam Kerja
                                 </button>
                             </h2>
@@ -340,14 +346,11 @@ include("functions/functions.php");
                         <div class="accordion" id="accordionExample">
                             <div class="accordion-item">
                                 <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseReward" aria-expanded="false"
-                                        aria-controls="collapseReward">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseReward" aria-expanded="false" aria-controls="collapseReward">
                                         Reward & Tunjangan
                                     </button>
                                 </h2>
-                                <div id="collapseReward" class="accordion-collapse collapse"
-                                    data-bs-parent="#accordionExample">
+                                <div id="collapseReward" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
                                         <strong>Reward & Tunjangan</strong>
                                         <ul>
@@ -371,13 +374,11 @@ include("functions/functions.php");
 
                             <div class="accordion-item">
                                 <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseKPI" aria-expanded="false" aria-controls="collapseKPI">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseKPI" aria-expanded="false" aria-controls="collapseKPI">
                                         KPI
                                     </button>
                                 </h2>
-                                <div id="collapseKPI" class="accordion-collapse collapse"
-                                    data-bs-parent="#accordionExample">
+                                <div id="collapseKPI" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
                                         <strong>KPI</strong>
                                         <ul>
@@ -393,14 +394,11 @@ include("functions/functions.php");
 
                             <div class="accordion-item">
                                 <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseGaji" aria-expanded="false"
-                                        aria-controls="collapseGaji">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGaji" aria-expanded="false" aria-controls="collapseGaji">
                                         Gaji
                                     </button>
                                 </h2>
-                                <div id="collapseGaji" class="accordion-collapse collapse"
-                                    data-bs-parent="#accordionExample">
+                                <div id="collapseGaji" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
                                         <strong>Gaji</strong><br>
                                         <p><em>Fee Persenan</em> adalah gaji yang dihitung dari total pendapatan kotor
@@ -419,14 +417,11 @@ include("functions/functions.php");
 
                             <div class="accordion-item">
                                 <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseDenda" aria-expanded="false"
-                                        aria-controls="collapseDenda">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDenda" aria-expanded="false" aria-controls="collapseDenda">
                                         Denda & Potong Gaji
                                     </button>
                                 </h2>
-                                <div id="collapseDenda" class="accordion-collapse collapse"
-                                    data-bs-parent="#accordionExample">
+                                <div id="collapseDenda" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
                                         <strong>Denda & Potong Gaji</strong>
                                         <ul>
@@ -500,12 +495,9 @@ include("functions/functions.php");
                 <div class="footer-ol">
                     <h4>follow us</h4>
                     <div class="social-links">
-                        <a href="https://www.facebook.com/profile.php?id=100093616384522"><i
-                                class="fab fa-facebook-f fa-2x" style="color: #3b5998;"></i></a>
-                        <a href="mailto:youremail@example.com"><i class="fas fa-envelope fa-2x"
-                                style="color: #0084b4;"></i></a>
-                        <a href="https://www.instagram.com/pensilajaib.std/"><i class="fab fa-instagram fa-2x"
-                                style="color:   #E1306C;"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=100093616384522"><i class="fab fa-facebook-f fa-2x" style="color: #3b5998;"></i></a>
+                        <a href="mailto:youremail@example.com"><i class="fas fa-envelope fa-2x" style="color: #0084b4;"></i></a>
+                        <a href="https://www.instagram.com/pensilajaib.std/"><i class="fab fa-instagram fa-2x" style="color:   #E1306C;"></i></a>
 
 
                     </div>
@@ -549,37 +541,37 @@ include("functions/functions.php");
     <script src="main/js.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script>
-    var slideIndex = 1;
-    showSlides(slideIndex);
+        var slideIndex = 1;
+        showSlides(slideIndex);
 
-    function plusSlides(n) {
-        showSlides(slideIndex += n);
-    }
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
 
-    function currentSlide(n) {
-        showSlides(slideIndex = n);
-    }
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
 
-    function showSlides(n) {
-        var i;
-        var slides = document.getElementsByClassName("mySlides");
-        var dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {
-            slideIndex = 1
-        }
-        if (n < 1) {
-            slideIndex = slides.length
-        }
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].className += " active";
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
 
-    }
+        }
     </script>
 
 

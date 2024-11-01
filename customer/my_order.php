@@ -1,26 +1,27 @@
 <div class="trx">
-	<center>
-		<h1>My Order</h1>
-		<p>Shipping and additional costs are calculated based on the values you have entered</p>
-	</center>
-	<hr>
-	<div class="tae-responve">
-		<table class="tab">
-			<thead>
-				<tr>
-					<th>Sr.No</th>
-					<!-- <th>Due Amount</th> -->
-					<th>Orderan Number</th>
-					<!-- <th>Quantity</th> -->
-					<!-- <th>Size</th> -->
-					<th>Order Date</th>
-					<th>complete / Pending</th>
-					<th>Status</th>
-				</tr>
-			</thead>
-			<tbody>
+    <center>
+        <h1>My Order</h1>
+        <p><span style="color:red">Ketika klik confirm maka tidak bisa dikembalikan lagi,</span> tolong cek kembali
+            dengan benar</p>
+    </center>
+    <hr>
+    <div class="tae-responve">
+        <table class="tab">
+            <thead>
+                <tr>
+                    <th>Sr.No</th>
+                    <!-- <th>Due Amount</th> -->
+                    <th>Orderan Number</th>
+                    <!-- <th>Quantity</th> -->
+                    <!-- <th>Size</th> -->
+                    <th>Order Date</th>
+                    <th>complete / Pending</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
 
-				<?php
+                <?php
 				$customer_session = $_SESSION['customer_email'];
 				$get_customer = "SELECT * FROM customers WHERE customer_email='$customer_session'";
 				$run_cust = mysqli_query($con, $get_customer);
@@ -52,18 +53,19 @@
 
 				?>
 
-					<tr>
-						<td><?php echo $i ?></td>
-						<!-- <td><?php echo $order_due_amount ?></td> -->
-						<td><?php echo $order_invoice ?></td>
-						<!-- <td><?php echo $order_qty ?></td> -->
-						<!-- <td><?php echo $order_size ?></td> -->
-						<td><?php echo $order_date ?></td>
-						<td><?php echo $order_status ?></td>
-						<td><a href="confirm.php?order_id=<?php echo $order_id ?>" target="_blank" class="btn btn-primary btn-sm">confirm Now</a></td>
-					</tr>
-				<?php } ?>
-			</tbody>
-		</table>
-	</div>
+                <tr>
+                    <td><?php echo $i ?></td>
+                    <!-- <td><?php echo $order_due_amount ?></td> -->
+                    <td><?php echo $order_invoice ?></td>
+                    <!-- <td><?php echo $order_qty ?></td> -->
+                    <!-- <td><?php echo $order_size ?></td> -->
+                    <td><?php echo $order_date ?></td>
+                    <td><?php echo $order_status ?></td>
+                    <td><a href="confirm.php?order_id=<?php echo $order_id ?>" target="_blank"
+                            class="btn btn-primary btn-sm">confirm Now</a></td>
+                </tr>
+                <?php } ?>
+            </tbody>
+        </table>
+    </div>
 </div>

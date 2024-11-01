@@ -29,6 +29,16 @@ $orderValidated = isset($_SESSION['order_validated']) && $_SESSION['order_valida
                 <h1>SELAMAT DATANG DI PT DUDU DIGITAL INDONESIA</h1>
             </marquee>
         </div>
+        <h4> <?php
+
+                if (!isset($_SESSION['customer_email'])) {
+                    echo "";
+                } else {
+                    echo "Users: " . $_SESSION['customer_email'] . "";
+                }
+
+
+                ?></h4>
     </div>
     <header>
         <div class="header-2">
@@ -52,8 +62,7 @@ $orderValidated = isset($_SESSION['order_validated']) && $_SESSION['order_valida
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                             <li class="nav-item"><a class="nav-link" href="cart.php"><i class="fa fa-shopping-cart"></i>
                                     <?php item(); ?> items in cart</a></li>
-                            <li class="nav-item"><a class="nav-link" href="customer_registration.php"><i
-                                        class="fa fa-user-plus"></i> Register</a></li>
+                            <!-- <li class="nav-item"><a class="nav-link" href="customer_registration.php"><i class="fa fa-user-plus"></i> Register</a></li> -->
                             <li class="nav-item">
                                 <?php
                                 if (!isset($_SESSION['customer_email'])) {
@@ -93,47 +102,47 @@ $orderValidated = isset($_SESSION['order_validated']) && $_SESSION['order_valida
             <div class="col-md-8">
                 <div class="row mt-4" id="contar">
                     <?php
-                if (isset($_GET['cat_id'])) {
-                    // Jika ada `cat_id` di URL, ambil produk berdasarkan kategori
-                    $cat_id = $_GET['cat_id'];
-                    $per_page = 6;
-                    $page = isset($_GET['page']) ? $_GET['page'] : 1;
-                    $start_from = ($page - 1) * $per_page;
+                    if (isset($_GET['cat_id'])) {
+                        // Jika ada `cat_id` di URL, ambil produk berdasarkan kategori
+                        $cat_id = $_GET['cat_id'];
+                        $per_page = 6;
+                        $page = isset($_GET['page']) ? $_GET['page'] : 1;
+                        $start_from = ($page - 1) * $per_page;
 
-                    // Query untuk produk berdasarkan kategori
-                    $get_product = "SELECT * FROM products 
+                        // Query untuk produk berdasarkan kategori
+                        $get_product = "SELECT * FROM products 
                                     WHERE cat_id = '$cat_id' 
                                     AND product_id NOT IN (
                                         SELECT product_id FROM customer_order WHERE order_status = 'Complete'
                                     ) 
                                     ORDER BY 1 DESC LIMIT $start_from, $per_page";
-                } else {
-                    // Query default jika `cat_id` tidak ada di URL
-                    $per_page = 6;
-                    $page = isset($_GET['page']) ? $_GET['page'] : 1;
-                    $start_from = ($page - 1) * $per_page;
+                    } else {
+                        // Query default jika `cat_id` tidak ada di URL
+                        $per_page = 6;
+                        $page = isset($_GET['page']) ? $_GET['page'] : 1;
+                        $start_from = ($page - 1) * $per_page;
 
-                    $get_product = "SELECT * FROM products 
+                        $get_product = "SELECT * FROM products 
                                     WHERE product_id NOT IN (
                                         SELECT product_id FROM customer_order WHERE order_status = 'Complete'
                                     ) 
                                     ORDER BY 1 DESC LIMIT $start_from, $per_page";
-                }
+                    }
 
-                // Jalankan query
-                $run_pro = mysqli_query($con, $get_product);
+                    // Jalankan query
+                    $run_pro = mysqli_query($con, $get_product);
 
-                // Cek apakah produk ditemukan
-                if (mysqli_num_rows($run_pro) > 0) {
-                    while ($row = mysqli_fetch_array($run_pro)) {
-                        $pro_id = $row['product_id'];
-                        $pro_title = $row['product_title'];
-                        $pro_desc = $row['product_desc'];
-                        $pro_price = $row['product_price'];
-                        $pro_img1 = $row['product_img1'];
+                    // Cek apakah produk ditemukan
+                    if (mysqli_num_rows($run_pro) > 0) {
+                        while ($row = mysqli_fetch_array($run_pro)) {
+                            $pro_id = $row['product_id'];
+                            $pro_title = $row['product_title'];
+                            $pro_desc = $row['product_desc'];
+                            $pro_price = $row['product_price'];
+                            $pro_img1 = $row['product_img1'];
 
-                        // Tampilkan produk
-                        echo "<div class='col-12 mb-4'>
+                            // Tampilkan produk
+                            echo "<div class='col-12 mb-4'>
                             <div class='card border-light shadow-sm'>
                                 <div class='card-body'>
                                     <div class='row align-items-center'>
@@ -152,8 +161,8 @@ $orderValidated = isset($_SESSION['order_validated']) && $_SESSION['order_valida
                             </div>
                         </div>";
 
-                        // Modal untuk detail produk
-                        echo "<div class='modal fade' id='productModal$pro_id' tabindex='-1' aria-labelledby='productModalLabel$pro_id' aria-hidden='true'>
+                            // Modal untuk detail produk
+                            echo "<div class='modal fade' id='productModal$pro_id' tabindex='-1' aria-labelledby='productModalLabel$pro_id' aria-hidden='true'>
                             <div class='modal-dialog'>
                                 <div class='modal-content'>
                                     <div class='modal-header'>
@@ -176,26 +185,23 @@ $orderValidated = isset($_SESSION['order_validated']) && $_SESSION['order_valida
                                 </div>
                             </div>
                         </div>";
+                        }
+                    } else {
+                        // Pesan jika tidak ada produk ditemukan
+                        echo "<div class='col-12'><p class='text-center'>No products found in this category.</p></div>";
                     }
-                } else {
-                    // Pesan jika tidak ada produk ditemukan
-                    echo "<div class='col-12'><p class='text-center'>No products found in this category.</p></div>";
-                }
-                ?>
+                    ?>
                 </div>
             </div>
         </div>
     </div>
 
 
-    <footer class="footer" id="footer">
-        <div class="container">
-            <p class="credit text-center mb-0">
-                Copyright &copy; <span><?php echo date("Y"); ?></span> | All rights reserved. | <span
-                    class="fw-bold">Designed By Pensil Ajaib</span>
-            </p>
-        </div>
-    </footer>
+    <!-- footer section starts  -->
+    <?php
+    include("includes/footer.php");
+    ?>
+    <!-- footer section   -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 

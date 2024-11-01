@@ -12,6 +12,9 @@ include("functions/functions.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pensil Ajaib</title>
 
+    <!-- favicon -->
+    <link rel="icon" href="website/all/pensilajaib.ico" type="image/x-icon">
+
     <!-- Meta viewport for responsiveness -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -83,9 +86,9 @@ include("functions/functions.php");
                             <div class="col-12">
                                 <hr class="mt-5 mb-4 border-secondary-subtle">
                                 <div class="d-flex gap-2 gap-md-4 flex-column flex-md-row justify-content-md-center">
-                                    <a href="customer_registration.php"
+                                    <!-- <a href="customer_registration.php"
                                         class="link-secondary text-decoration-none">Daftar
-                                        Sekarang</a>
+                                        Sekarang</a> -->
                                 </div>
                             </div>
                         </div>
