@@ -61,8 +61,8 @@ if (!isset($_SESSION['customer_email'])) {
 
             ?>
                 </a>
-                <a id="pr" href="#"> Shopping Cart Total Price: INR <?php totalPrice(); ?>, Total Items
-                    <?php item(); ?></a>
+                <!-- <a id="pr" href="#"> Shopping Cart Total Price: INR <?php totalPrice(); ?>, Total Items
+                    <?php item(); ?></a> -->
             </div>
 
         </div>
@@ -166,11 +166,11 @@ if (!isset($_SESSION['customer_email'])) {
             <h1 text-align="center">Silahkan Confirmasi Orderan Jika Sudah Selesai</h1>
             <form action="confirm.php?update_id=<?php echo $order_id; ?>" method="post" enctype="multipart/form-data">
                 <div class="form-group">
-                    <label> Jumlah Di kerjakan</label>
+                    <label> Nama Karyawan</label>
                     <input type="text" class="form-control" name="invoice_number" required="">
                 </div>
                 <div class="form-group">
-                    <label> Isi </label>
+                    <label> Code Client </label>
                     <input type="text" class="form-control" name="amount" required="">
                 </div>
                 <div class="form-group">
@@ -179,10 +179,10 @@ if (!isset($_SESSION['customer_email'])) {
                         <option>Kirim Wa</option>
                     </select>
                 </div>
-                <div class="form-group">
+                <!-- <div class="form-group">
                     <label> isi </label>
                     <input type="text" class="form-control" name="trfr_number" required="">
-                </div>
+                </div> -->
                 <div class="form-group">
                     <label>Waktu Penyelesaian </label>
                     <input type="date" class="form-control" name="date" required="">

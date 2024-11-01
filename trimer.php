@@ -139,7 +139,7 @@ $orderValidated = isset($_SESSION['order_validated']) && $_SESSION['order_valida
                                     <div class='row align-items-center'>
                                         <div class='col-8'>
                                             <h5 class='card-title'><a href='#' class='text-dark' data-bs-toggle='modal' data-bs-target='#productModal$pro_id'>$pro_title</a></h5>
-                                            <p class='card-text text-muted'>INR $pro_price</p>
+                                            <p class='card-text text-muted'>Code Client $pro_price</p>
                                         </div>
                                         <div class='col-4 text-end'>
                                             <div class='d-flex justify-content-center mt-3'>
@@ -162,7 +162,7 @@ $orderValidated = isset($_SESSION['order_validated']) && $_SESSION['order_valida
                                     </div>
                                     <div class='modal-body'>
                                         <h5 class='modal-title' id='productModalLabel$pro_id'>$pro_title</h5>
-                                        <h3 class='description'>Rp $pro_price</h3>
+                                        <h3 class='description'>Code Client $pro_price</h3>
                                         <p class='description'>$pro_desc</p>
                                     </div>
                                     <div class='modal-footer'>

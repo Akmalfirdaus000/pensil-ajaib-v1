@@ -85,14 +85,14 @@ if (!isset($_SESSION['admin_email'])){
   </li>
 
  <li class="button-dropdown">
-    <a href="#" class="dropdown-toggle" data-toggle="collapse" data-target="#users"><i class="fa fa-fw fa-table"></i>  Karyawan <i class="fa fa-fw fa-caret-down"></i></a>
+    <a href="#" class="dropdown-toggle" data-toggle="collapse" data-target="#users"><i class="fa fa-fw fa-table"></i>  Admin <i class="fa fa-fw fa-caret-down"></i></a>
 
     <ul id="#users" class="dropdown-menu">
       <li>
-        <a href="index.php?insert_user">Tambah Karyawan</a>
+        <a href="index.php?insert_user">Tambah Admin</a>
       </li>
       <li>
-        <a href="index.php?view_user">Lihat Karyawan</a>
+        <a href="index.php?view_user">Lihat Admin</a>
       </li>
       <li>
         <a href="index.php?user_profile=<?php echo $admin_id ?>">Edit Profile</a>
@@ -114,7 +114,12 @@ if (!isset($_SESSION['admin_email'])){
   </li>
   <li>
   	<a href="index.php?view_customer">
-  		<i class="fa fa-fw fa-edit"></i> Lihat Karyawan
+  		<i class="fa fa-fw fa-edit"></i> Lihat karyawan
+  	</a>
+  </li>
+  <li>
+  	<a href="customer_registration.php">
+  		<i class="fa fa-fw fa-edit"></i> Pendaftaran Karyawan
   	</a>
   </li>
   <li>

@@ -251,7 +251,7 @@ if (isset($_GET['pro_id'])) {
                             <div id="details" class="mb-4">
                                 <p class="description text-muted"><?php echo $p_desc; ?></p>
                                 <h5 class="price fw-bold">
-                                    Price: <span class="text-success">INR <?php echo $p_price; ?></span>
+                                    Code Client: <span class="text-success"> <?php echo $p_price; ?></span>
                                 </h5>
                             </div>
 

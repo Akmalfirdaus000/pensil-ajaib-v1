@@ -38,6 +38,9 @@ include("includes/db.php");
 		<h4 class="forgot-password">
 			<a href="forgot_password.php"> Lost your password? Forgot Password </a>
 		</h4>
+		<!-- <a href="customer_registration.php"
+											class="link-secondary text-decoration-none">Daftar
+											Sekarang</a> -->
 	</form>
 </div>
 </body>

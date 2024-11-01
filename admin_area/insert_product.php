@@ -94,7 +94,7 @@ if (!isset($_SESSION['admin_email'])){
 						<input type="file" name="product_img3" class="form-control" required="">
 					</div>
 					<div class="form-group">
-						<label class="col-md-3 control-label">Harga</label>
+						<label class="col-md-3 control-label">Code Client</label>
 						<input type="text" name="product_price" class="form-control" required="">
 					</div>
 					<!-- <div class="form-group">

@@ -11,7 +11,7 @@ if (!isset($_SESSION['admin_email'])){
 		<div class="breadcrump">
 			<li class="active">
 				<i class="fa fa-bar-chart"></i>
-				Dashboard / View Payments
+				Dashboard / View Penyelesaian
 			</li>
 		</div>
 	</div>
@@ -22,7 +22,7 @@ if (!isset($_SESSION['admin_email'])){
 			<div class="panel-heading">
 				<h3 class="panel-title">
 					<i class="fa fa-money fa-fw"></i>
-					View Payments
+					View Penyelesaian
 				</h3>
 			</div>
 			<div class="panel-body">
@@ -30,10 +30,10 @@ if (!isset($_SESSION['admin_email'])){
                     <table class="table table-bordered table-hover table-striped">
                         <thead>
                             <tr>
-                                <th>Payment No: </th>
-                                <th>Invoice No: </th>
-                                <th>Amount Paid: </th>
-                                <th>Payment Method: </th>
+                                <th>No: </th>
+                                <th>Nama Karyawan: </th>
+                                <th>Kode Client: </th>
+                                <th>Bukti </th>
                                 
                                 <th>Rference No: </th>
                                 
@@ -65,7 +65,7 @@ if (!isset($_SESSION['admin_email'])){
                             <tr>
                                 <td><?php echo $i; ?></td>
                                 <td bgcolor="yellow"><?php echo $invoice_id; ?></td>
-                                <td> INR <?php echo $amount; ?></td>
+                                <td>  <?php echo $amount; ?></td>
                                 <td><?php echo $payment_mode; ?></td>
                                 <td><?php echo $ref_no; ?></td>
                                 <td><?php echo $payment_date; ?></td>
